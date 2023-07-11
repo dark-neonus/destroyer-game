@@ -53,9 +53,9 @@ public class Map : MonoBehaviour
     void GenerateMap() {
         width = (int)(originalWidth * globalScale);
         height = (int)(originalHeight * globalScale);
-        heightMap = NoiseGenerator.MountainGenerate(width, height, heightWaves, globalScale, offset);
+        heightMap = NoiseGenerator.HeightGenerate(width, height, heightWaves, globalScale, offset);
 
-        // moistureMap = NoiseGenerator.MountainGenerate(width, height, moistureWaves, offset);
+        moistureMap = NoiseGenerator.MoistureGenerate(width, height, moistureWaves, globalScale, offset);
 
         // heatMap = NoiseGenerator.MountainGenerate(width, height, heatWaves, offset);
 
@@ -64,7 +64,7 @@ public class Map : MonoBehaviour
                 GameObject tile = Instantiate(tilePrefab, new Vector3(x, y, 0), Quaternion.identity, gameObject.transform);
                 // tile.GetComponent<SpriteRenderer>().sprite = GetBiome(heightMap[x, y], moistureMap[x, y], heatMap[x, y]).GetTleSprite();
                 tile.GetComponent<SpriteRenderer>().sprite = tileSprite;
-                tile.GetComponent<SpriteRenderer>().color = new Color(heightMap[x, y], heightMap[x, y], heightMap[x, y]);
+                tile.GetComponent<SpriteRenderer>().color = new Color(moistureMap[x, y], moistureMap[x, y], moistureMap[x, y]);
             }
         } 
     }
