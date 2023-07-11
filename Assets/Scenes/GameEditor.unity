@@ -2229,7 +2229,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3680249737219923784, guid: 29c79878e5f62a0b59a298499ed806cb, type: 3}
       propertyPath: speed
-      value: 100
+<<<<<<< HEAD
+<<<<<<< HEAD
+      value: 20
+=======
+      value: 50
+>>>>>>> parent of e670291 (test request pullp)
+=======
+      value: 50
+>>>>>>> parent of e670291 (test request pullp)
       objectReference: {fileID: 0}
     - target: {fileID: 7046949545091274663, guid: 29c79878e5f62a0b59a298499ed806cb, type: 3}
       propertyPath: m_Name
