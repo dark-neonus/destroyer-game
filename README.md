@@ -1,21 +1,2 @@
 # destroyer-game
-This game is neon
- .
- .
- .
-.
- .
-.
- .
-.
-  .
-.
-.
- .
-.
- .
-.
-.
- .
-.
-and dope.
+This game is neon and dope.
