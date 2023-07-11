@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24d64163290182909d5e6d253b39dad, type: 3}
+  m_Name: Jungle
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: -252935609, guid: 206366a6c71e1f4fe9011aa84ab4ca65, type: 3}
+  minHeight: 0.2
+  maxHeight: 0.8
+  minMoisture: 0.6
+  maxMoisture: 0.8
+  minHeat: 0.4
+  maxHeat: 0.6
+  priority: 1
