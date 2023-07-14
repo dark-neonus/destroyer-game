@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: 677248559, guid: 206366a6c71e1f4fe9011aa84ab4ca65, type: 3}
+  heightMatter: 1
   minHeight: 0
   maxHeight: 0.2
-  minMoisture: 0
+  moistureMatter: 1
+  minMoisture: 0.8
   maxMoisture: 1
+  heatMatter: 0
   minHeat: 0
   maxHeat: 1
   priority: 3

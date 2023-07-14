@@ -17,19 +17,16 @@ public class Map : MonoBehaviour
 
     [Header("Height Map")]
     public Wave[] heightWaves;
-    public float heightHeightCoef;
     public float[,] heightMap;
     
 
     [Header("Moisture Map")]
     public Wave[] moistureWaves;
-    public float moistureHeightCoef;
     private float[,] moistureMap;
     
 
     [Header("Heat Map")]
     public Wave[] heatWaves;
-    public float heatHeightCoef;
     private float[,] heatMap;
 
 
@@ -57,14 +54,21 @@ public class Map : MonoBehaviour
 
         moistureMap = NoiseGenerator.MoistureGenerate(width, height, moistureWaves, globalScale, offset);
 
-        // heatMap = NoiseGenerator.MountainGenerate(width, height, heatWaves, offset);
+        heatMap = NoiseGenerator.HeatGenerate(width, height, heatWaves, globalScale, offset);
 
         for (int x = 0; x < width; ++x) {
             for (int y = 0; y < height; ++y) {
                 GameObject tile = Instantiate(tilePrefab, new Vector3(x, y, 0), Quaternion.identity, gameObject.transform);
-                // tile.GetComponent<SpriteRenderer>().sprite = GetBiome(heightMap[x, y], moistureMap[x, y], heatMap[x, y]).GetTleSprite();
-                tile.GetComponent<SpriteRenderer>().sprite = tileSprite;
-                tile.GetComponent<SpriteRenderer>().color = new Color(moistureMap[x, y], moistureMap[x, y], moistureMap[x, y]);
+                tile.GetComponent<SpriteRenderer>().sprite = GetBiome(heightMap[x, y], moistureMap[x, y], heatMap[x, y]).GetTleSprite();
+                // tile.GetComponent<SpriteRenderer>().sprite = tileSprite;
+                // tile.GetComponent<SpriteRenderer>().color = new Color(moistureMap[x, y], moistureMap[x, y], moistureMap[x, y]);
+                // if (moistureMap[x, y] < 0.5f) {
+                //     tile.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(heightMap[x, y], heightMap[x, y], heightMap[x, y]), new Color(1.0f, 1.0f, 0.0f), 0.5f - moistureMap[x, y]);
+                // }
+                // else {
+                //     tile.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(heightMap[x, y], heightMap[x, y], heightMap[x, y]), new Color(0.0f, 0.0f, 1.0f), moistureMap[x, y] - 0.5f);
+                // }
+                // tile.GetComponent<SpriteRenderer>().color = new Color(heatMap[x, y], heatMap[x, y], heatMap[x, y]);
             }
         } 
     }

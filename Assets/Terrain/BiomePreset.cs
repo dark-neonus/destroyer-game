@@ -6,10 +6,16 @@ using UnityEditor;
 public class BiomePreset : ScriptableObject
 {
     public Sprite[] tiles;
+
+    public bool heightMatter;
     public float minHeight;
     public float maxHeight;
+
+    public bool moistureMatter;
     public float minMoisture;
     public float maxMoisture;
+
+    public bool heatMatter;
     public float minHeat;
     public float maxHeat;
 
@@ -20,7 +26,7 @@ public class BiomePreset : ScriptableObject
     }
 
     public bool MatchCondition (float height, float moisture, float heat) {
-        return IsInRange(height, minHeight, maxHeight) && IsInRange(moisture, minMoisture, maxMoisture) && IsInRange(heat, minHeat, maxHeat);
+        return (IsInRange(height, minHeight, maxHeight) || !heightMatter) && (IsInRange(moisture, minMoisture, maxMoisture) || !moistureMatter) && (IsInRange(heat, minHeat, maxHeat) || !heatMatter);
     }
 
     public bool IsInRange(float value, float start, float end) {
