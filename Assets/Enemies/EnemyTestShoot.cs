@@ -17,7 +17,7 @@ public class EnemyTestShoot : MonoBehaviour
     void Start() {
         currentCooldown = 0;
         viewDistance = cannon.GetComponent<EnemyCannon>().viewDistance;
-        player = FindObjectOfType<PlayerMovement>().gameObject.transform;
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update() {

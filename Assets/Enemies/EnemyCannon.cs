@@ -9,7 +9,7 @@ public class EnemyCannon : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<PlayerMovement>().gameObject.transform;
+        player = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()

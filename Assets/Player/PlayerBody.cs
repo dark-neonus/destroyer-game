@@ -1,25 +1,32 @@
-using System.Xml.Schema;
-using System;
-using System.Numerics;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerBody : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
     private UnityEngine.Vector2 direction;
-    public Transform body;
+
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponentInParent<Rigidbody2D>();
+    }
 
     void Update() {
         TakeInput();
         Rotate();
+    }
+
+    void FixedUpdate()
+    {
         Move();
+        ShiftLegs();
     }
 
     private void Move() {
-        transform.Translate(direction * speed * Time.deltaTime);        
+        // transform.Translate(direction * speed * Time.deltaTime);    
+        rb.velocity = direction * speed;   
     }
 
     private void Rotate()
@@ -29,8 +36,8 @@ public class PlayerMovement : MonoBehaviour
             float targetAngle = UnityEngine.Vector2.SignedAngle(UnityEngine.Vector2.right, direction);
 
             // Smoothly rotate the rectangle towards the target angle
-            float angle = Mathf.MoveTowardsAngle(body.eulerAngles.z, targetAngle, rotationSpeed * Time.deltaTime );
-            body.rotation = UnityEngine.Quaternion.Euler(0f, 0f, angle);
+            float angle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, targetAngle, rotationSpeed * Time.deltaTime );
+            transform.rotation = UnityEngine.Quaternion.Euler(0f, 0f, angle);
         }
     }
 
@@ -58,5 +65,11 @@ public class PlayerMovement : MonoBehaviour
         direction.Normalize();
     }
 
-
+    private void ShiftLegs() {
+        LegScript[] legScripts = GetComponentsInChildren<LegScript>();
+        foreach (LegScript legScript in legScripts) {
+            legScript.targetMovingOffset = direction * speed;
+        }
+        
+    }
 }

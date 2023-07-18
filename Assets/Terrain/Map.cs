@@ -56,19 +56,18 @@ public class Map : MonoBehaviour
 
         heatMap = NoiseGenerator.HeatGenerate(width, height, heatWaves, globalScale, offset);
 
+        BiomePreset tmpBiome;
+
         for (int x = 0; x < width; ++x) {
             for (int y = 0; y < height; ++y) {
-                GameObject tile = Instantiate(tilePrefab, new Vector3(x, y, 0), Quaternion.identity, gameObject.transform);
-                tile.GetComponent<SpriteRenderer>().sprite = GetBiome(heightMap[x, y], moistureMap[x, y], heatMap[x, y]).GetTleSprite();
-                // tile.GetComponent<SpriteRenderer>().sprite = tileSprite;
-                // tile.GetComponent<SpriteRenderer>().color = new Color(moistureMap[x, y], moistureMap[x, y], moistureMap[x, y]);
-                // if (moistureMap[x, y] < 0.5f) {
-                //     tile.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(heightMap[x, y], heightMap[x, y], heightMap[x, y]), new Color(1.0f, 1.0f, 0.0f), 0.5f - moistureMap[x, y]);
-                // }
-                // else {
-                //     tile.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(heightMap[x, y], heightMap[x, y], heightMap[x, y]), new Color(0.0f, 0.0f, 1.0f), moistureMap[x, y] - 0.5f);
-                // }
-                // tile.GetComponent<SpriteRenderer>().color = new Color(heatMap[x, y], heatMap[x, y], heatMap[x, y]);
+                GameObject tile = Instantiate(tilePrefab, new Vector3(x - width / 2, y - height / 2, 0), Quaternion.identity, gameObject.transform);
+                tmpBiome = GetBiome(heightMap[x, y], moistureMap[x, y], heatMap[x, y]);
+                if (tmpBiome.biomeName == "Ocean") {
+                    moistureMap[x, y] = 1.0f;
+                }
+                tile.GetComponent<SpriteRenderer>().sprite = tmpBiome.GetTleSprite();
+                tile.GetComponent<TileInfo>().InitTile(TileInfo.biomeIDs[tmpBiome.biomeName], heightMap[x, y], moistureMap[x, y], heatMap[x, y]);
+                // tile.transform.localScale = new Vector3(1.01f, 1.01f, 0.0f);
             }
         } 
     }

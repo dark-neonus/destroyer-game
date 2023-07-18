@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: 1708604350, guid: 206366a6c71e1f4fe9011aa84ab4ca65, type: 3}
+  biomeName: Ice
   heightMatter: 0
   minHeight: 0
   maxHeight: 0
   moistureMatter: 1
-  minMoisture: 0.6
+  minMoisture: 0.8
   maxMoisture: 1
   heatMatter: 1
   minHeat: 0

@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,12 +10,20 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject playerReference;
     private GameObject player;
+    private GameObject playerCannonBase;
 
     public float health;
     public float maxHealth;
 
     public Slider healthBarSlider;
     public TextMeshProUGUI healthText;
+
+    public List<GameObject> playerCannonBasePrefabs;
+    public int playerLevel;
+
+    public List<GameObject> playerCannonPrefabs;
+    public List<int> selectedCannonIndices;
+
 
     void Awake()
     {
@@ -31,13 +38,18 @@ public class PlayerStats : MonoBehaviour
 
     void Start() {
         health = maxHealth;
-        healthBarSlider.value = CalculateHealthPercentage();
-        UpdateHealthText();
-        player = FindObjectOfType<PlayerMovement>().gameObject;
+        // healthBarSlider.value = CalculateHealthPercentage();
+        // UpdateHealthText();
+        player = GameObject.FindWithTag("Player");
         if (player != null) {
             Destroy(player);
+            foreach (Transform child in transform) {
+	            GameObject.Destroy(child.gameObject);
+            }
         }
-        Respawn();
+        UpdateCannonBaseInfo();
+        PlayerInit();
+
         
     }
     public void DealDamage(float damage) {
@@ -81,15 +93,36 @@ public class PlayerStats : MonoBehaviour
 
     private void CheckRespawn() {
         if (Input.GetKey(KeyCode.Space) && player == null) {
-            Respawn();
+            PlayerInit();
         }
     }
-    public void Respawn() {
+    public void PlayerInit() {
         health = maxHealth;
-        healthBarSlider.value = CalculateHealthPercentage();
-        UpdateHealthText();
+        // healthBarSlider.value = CalculateHealthPercentage();
+        // UpdateHealthText();
         player = Instantiate(playerReference);
-        CameraMechanics cameraFollowPlayer = Camera.main.GetComponent<CameraMechanics>();
+
+        InitCannonBase();
+
+        UpdatePlayerReferences();
+    }
+
+    private void InitCannonBase() {
+        playerCannonBase = Instantiate(playerCannonBasePrefabs[playerLevel], player.transform);
+
+        player.GetComponent<PlayerShoot>().cannonBase = playerCannonBase.GetComponent<CannonBase>();
+
+        List<GameObject> cannonPlatforms = playerCannonBase.GetComponent<CannonBase>().cannonPlatforms;
+
+        for (int i = 0; i < Mathf.Min(cannonPlatforms.Count, selectedCannonIndices.Count); i++) {
+            if (playerCannonPrefabs[selectedCannonIndices[i]] != null) {
+                Instantiate(playerCannonPrefabs[selectedCannonIndices[i]], cannonPlatforms[i].transform);
+            }
+        } 
+    }
+
+    private void UpdatePlayerReferences() {
+        CameraMechanics cameraFollowPlayer = GameObject.FindWithTag("MainCamera").GetComponent<CameraMechanics>();
         if (cameraFollowPlayer != null) {
             cameraFollowPlayer.player = player.transform;
         }
@@ -105,5 +138,9 @@ public class PlayerStats : MonoBehaviour
         foreach (EnemyMovement enemyMovementScript in enemyMovementScripts) {
             enemyMovementScript.player = player.transform;
         }
+    }
+
+    public void UpdateCannonBaseInfo() {
+
     }
 }

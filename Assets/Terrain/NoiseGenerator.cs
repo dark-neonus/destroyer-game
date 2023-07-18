@@ -77,7 +77,7 @@ public class NoiseGenerator : MonoBehaviour
                 // Distance from center [0, 1]
                 float r = NormilizedDistance(centerX, centerY, x, y);
                 
-                noiseMap[x, y] = noiseMap[x, y] + Mathf.Pow(1.6f * r - 0.64f, 3.0f);
+                noiseMap[x, y] = noiseMap[x, y] + Mathf.Pow(r - 0.1f, 8.0f);
 
                 noiseMap[x, y] = Mathf.Max(0.0f, Mathf.Min(1.0f, noiseMap[x, y]));
 

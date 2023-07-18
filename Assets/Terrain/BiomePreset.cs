@@ -5,7 +5,8 @@ using UnityEditor;
 [CreateAssetMenu(fileName = "Biome Preset", menuName = "New Biome Preset")]
 public class BiomePreset : ScriptableObject
 {
-    public Sprite[] tiles;
+    public Sprite[] tiles; 
+    public string biomeName;
 
     public bool heightMatter;
     public float minHeight;

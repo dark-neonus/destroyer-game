@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: -1364762353, guid: 206366a6c71e1f4fe9011aa84ab4ca65, type: 3}
+  biomeName: Grassland
   heightMatter: 0
   minHeight: 0
   maxHeight: 0
   moistureMatter: 1
   minMoisture: 0.2
-  maxMoisture: 0.4
+  maxMoisture: 0.45
   heatMatter: 1
   minHeat: 0.2
-  maxHeat: 0.8
+  maxHeat: 1
   priority: 0

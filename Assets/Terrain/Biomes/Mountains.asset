@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: -1337529817, guid: 206366a6c71e1f4fe9011aa84ab4ca65, type: 3}
+  biomeName: Mountains
   heightMatter: 1
   minHeight: 0.62
   maxHeight: 1

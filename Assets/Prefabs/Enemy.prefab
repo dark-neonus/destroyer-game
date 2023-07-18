@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254544418801289357}
   - component: {fileID: 8592338696556910575}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5404519038495890543}
   - component: {fileID: 2830921213696367021}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 8760326670822548480}
   - component: {fileID: 6095022802769765166}
   - component: {fileID: 5239869593785695694}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ MonoBehaviour:
   projectileSpawner: {fileID: 286586368639207662}
   player: {fileID: 0}
   projectile: {fileID: 6586769690976256954, guid: 78c25804a2a8765f4a3ee7ae91b5e855, type: 3}
-  projectileForce: 5
+  projectileForce: 10
   cooldown: 0.5
 --- !u!114 &5239869593785695694
 MonoBehaviour:
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 3995703793312166523}
   - component: {fileID: 259264753746584789}
   - component: {fileID: 325835354283265431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Enemy Collider
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 1956821595737768505}
   - component: {fileID: 8689961928291165973}
   - component: {fileID: 5526837972212450559}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1021967423342357840}
   - component: {fileID: 325043394148801669}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 2241623357257833471}
   - component: {fileID: 3185132088387404733}
   - component: {fileID: 187185380122946067}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Enemy UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5318224411333923074}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 264343894927122459}
   - component: {fileID: 3596257883295511893}
   - component: {fileID: 7813051569076125935}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2430806119520415742}
   - component: {fileID: 1814310414341900441}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -818,7 +818,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286586368639207662}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Projectile Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
