@@ -8,21 +8,20 @@ public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats playerStats;
 
-    public GameObject playerReference;
+    public List<GameObject> playerReferences;
+    public int playerLevel;
+
+    private int tmpLevel;
     private GameObject player;
-    private GameObject playerCannonBase;
+
+    public List<GameObject> playerCannonPrefabs;
+    public List<int> selectedCannonIndices;
 
     public float health;
     public float maxHealth;
 
     public Slider healthBarSlider;
     public TextMeshProUGUI healthText;
-
-    public List<GameObject> playerCannonBasePrefabs;
-    public int playerLevel;
-
-    public List<GameObject> playerCannonPrefabs;
-    public List<int> selectedCannonIndices;
 
 
     void Awake()
@@ -40,18 +39,31 @@ public class PlayerStats : MonoBehaviour
         health = maxHealth;
         // healthBarSlider.value = CalculateHealthPercentage();
         // UpdateHealthText();
-        player = GameObject.FindWithTag("Player");
-        if (player != null) {
-            Destroy(player);
-            foreach (Transform child in transform) {
-	            GameObject.Destroy(child.gameObject);
-            }
-        }
-        UpdateCannonBaseInfo();
-        PlayerInit();
-
+        tmpLevel = playerLevel;
+        SpawnPlayer();
         
     }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            playerLevel = 0;
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            playerLevel = 1;
+        }
+        if (Input.GetKey(KeyCode.Alpha3))
+        {
+            playerLevel = 2;
+        }
+        if (playerLevel != tmpLevel) {
+            SpawnPlayer();
+        }
+        tmpLevel = playerLevel;
+    }
+
     public void DealDamage(float damage) {
         health -= damage;
         CheckDeath();
@@ -86,39 +98,15 @@ public class PlayerStats : MonoBehaviour
         healthText.text = Mathf.Ceil(health).ToString() + "/" + Mathf.Ceil(maxHealth).ToString(); 
     }
 
-    void Update()
-    {
-        CheckRespawn();
-    }
 
-    private void CheckRespawn() {
-        if (Input.GetKey(KeyCode.Space) && player == null) {
-            PlayerInit();
-        }
-    }
+
     public void PlayerInit() {
         health = maxHealth;
         // healthBarSlider.value = CalculateHealthPercentage();
         // UpdateHealthText();
-        player = Instantiate(playerReference);
-
-        InitCannonBase();
-
+        player = Instantiate(playerReferences[playerLevel]);
+        SetCannons();
         UpdatePlayerReferences();
-    }
-
-    private void InitCannonBase() {
-        playerCannonBase = Instantiate(playerCannonBasePrefabs[playerLevel], player.transform);
-
-        player.GetComponent<PlayerShoot>().cannonBase = playerCannonBase.GetComponent<CannonBase>();
-
-        List<GameObject> cannonPlatforms = playerCannonBase.GetComponent<CannonBase>().cannonPlatforms;
-
-        for (int i = 0; i < Mathf.Min(cannonPlatforms.Count, selectedCannonIndices.Count); i++) {
-            if (playerCannonPrefabs[selectedCannonIndices[i]] != null) {
-                Instantiate(playerCannonPrefabs[selectedCannonIndices[i]], cannonPlatforms[i].transform);
-            }
-        } 
     }
 
     private void UpdatePlayerReferences() {
@@ -140,7 +128,24 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void UpdateCannonBaseInfo() {
+    public void SpawnPlayer() {
+        player = GameObject.FindWithTag("Player");
+        if (player != null) {
+            Destroy(player);
+            foreach (Transform child in transform) {
+	            GameObject.Destroy(child.gameObject);
+            }
+        }
+        PlayerInit();
+    }
 
+    private void SetCannons() {
+        List<GameObject> cannonPlatforms = player.GetComponentInChildren<CannonBase>().gameObject.GetComponent<CannonBase>().cannonPlatforms;
+
+        for (int i = 0; i < Mathf.Min(cannonPlatforms.Count, selectedCannonIndices.Count); i++) {
+            if (playerCannonPrefabs[selectedCannonIndices[i]] != null) {
+                Instantiate(playerCannonPrefabs[selectedCannonIndices[i]], cannonPlatforms[i].transform);
+            }
+        } 
     }
 }

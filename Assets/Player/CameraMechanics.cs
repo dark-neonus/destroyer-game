@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMechanics : MonoBehaviour
 {
+    [HideInInspector]
     public Transform player;
     public float smooth;
     public Vector3 offset;
@@ -14,6 +15,7 @@ public class CameraMechanics : MonoBehaviour
     public float maxZoom;
 
     private float scrollInput;
+    private Vector3 velocity = Vector3.zero;
 
     void FixedUpdate()
     { 
@@ -28,7 +30,7 @@ public class CameraMechanics : MonoBehaviour
     private void FollowPlayer() {
         if (player != null) {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = Vector3.Lerp(transform.position, Vector3.Lerp(player.position, mousePosition, magnetToMouse) + offset, smooth);
+            transform.position = Vector3.SmoothDamp(transform.position, Vector3.Lerp(player.position, mousePosition, magnetToMouse) + offset, ref velocity, smooth * Time.deltaTime);
         }
     } 
 

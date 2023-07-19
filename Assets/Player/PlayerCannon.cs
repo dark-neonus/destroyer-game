@@ -10,10 +10,18 @@ public class PlayerCannon : MonoBehaviour
     public float cooldown;
     private float currentCooldown;
 
+    private Transform sprite;
+    public float kickbackDuration;
+    public float kickbackOffset;
+    private float kickbackTargetPosition;
+    private bool isKickbacking;
+
 
     void Start()
     {
+        isKickbacking = false;
         currentCooldown = 0;
+        sprite = GetComponentInChildren<SpriteRenderer>().gameObject.transform;
     }
 
     void Update()
@@ -44,7 +52,37 @@ public class PlayerCannon : MonoBehaviour
             bullet.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
 
             currentCooldown = cooldown;
+
+            if (!isKickbacking) {
+                StartCoroutine(Kickback());
+            }
         }
+    }
+
+    private IEnumerator Kickback() {
+        isKickbacking = true;
+        float timer = 0f;
+        kickbackTargetPosition = sprite.localPosition.x - kickbackOffset;
+
+        while (timer < kickbackDuration / 2) {
+            timer += Time.deltaTime;
+            sprite.localPosition = new Vector3(Mathf.Lerp(sprite.localPosition.x, kickbackTargetPosition, timer / kickbackDuration * 2), sprite.localPosition.y, sprite.localPosition.z);
+            yield return null;
+        }
+
+        sprite.localPosition = new Vector3(kickbackTargetPosition, sprite.localPosition.y, sprite.localPosition.z);
+
+
+        timer = 0f;
+        kickbackTargetPosition = sprite.localPosition.x + kickbackOffset;
+
+        while (timer < kickbackDuration / 2) {
+            timer += Time.deltaTime;
+            sprite.localPosition = new Vector3(Mathf.Lerp(sprite.localPosition.x, kickbackTargetPosition, timer / kickbackDuration * 2), sprite.localPosition.y, sprite.localPosition.z);
+            yield return null;
+        }
+        sprite.localPosition = new Vector3(kickbackTargetPosition, sprite.localPosition.y, sprite.localPosition.z);
+        isKickbacking = false;
     }
 
 }
