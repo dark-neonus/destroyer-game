@@ -4,71 +4,71 @@ public class PlayerBody : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
-    private UnityEngine.Vector2 direction;
+    private UnityEngine.Vector2 _direction;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
 
     void Start()
     {
-        rb = GetComponentInParent<Rigidbody2D>();
+        _rb = GetComponentInParent<Rigidbody2D>();
     }
 
     void Update() {
-        TakeInput();
-        Rotate();
+        _TakeInput();
+        _Rotate();
     }
 
     void FixedUpdate()
     {
-        Move();
-        ShiftLegs();
+        _Move();
+        _ShiftLegs();
     }
 
-    private void Move() {
+    private void _Move() {
         // transform.Translate(direction * speed * Time.deltaTime);    
-        rb.velocity = direction * speed;   
+        _rb.velocity = _direction * speed;   
     }
 
-    private void Rotate()
+    private void _Rotate()
     {
-        if (direction != UnityEngine.Vector2.zero) {
+        if (_direction != UnityEngine.Vector2.zero) {
             // Calculate the angle between the current direction and the right vector (1, 0)
-            float targetAngle = UnityEngine.Vector2.SignedAngle(UnityEngine.Vector2.right, direction);
+            float targetAngle_ = UnityEngine.Vector2.SignedAngle(UnityEngine.Vector2.right, _direction);
 
             // Smoothly rotate the rectangle towards the target angle
-            float angle = Mathf.MoveTowardsAngle(transform.eulerAngles.z, targetAngle, rotationSpeed * Time.deltaTime );
-            transform.rotation = UnityEngine.Quaternion.Euler(0f, 0f, angle);
+            float angle_ = Mathf.MoveTowardsAngle(transform.eulerAngles.z, targetAngle_, rotationSpeed * Time.deltaTime );
+            transform.rotation = UnityEngine.Quaternion.Euler(0f, 0f, angle_);
         }
     }
 
-    private void TakeInput()
+    private void _TakeInput()
     {
-        direction = UnityEngine.Vector2.zero;
+        _direction = UnityEngine.Vector2.zero;
 
         if (Input.GetKey(KeyCode.S))
         {
-            direction += UnityEngine.Vector2.down;
+            _direction += UnityEngine.Vector2.down;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            direction += UnityEngine.Vector2.right;
+            _direction += UnityEngine.Vector2.right;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            direction += UnityEngine.Vector2.up;
+            _direction += UnityEngine.Vector2.up;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            direction += UnityEngine.Vector2.left;
+            _direction += UnityEngine.Vector2.left;
         }
 
-        direction.Normalize();
+        _direction.Normalize();
     }
 
-    private void ShiftLegs() {
-        LegScript[] legScripts = GetComponentsInChildren<LegScript>();
-        foreach (LegScript legScript in legScripts) {
-            legScript.movingOffsetDirection = direction;
+    private void _ShiftLegs() {
+        LegScript[] legScripts_ = GetComponentsInChildren<LegScript>();
+        foreach (LegScript legScript_It in legScripts_) {
+            legScript_It.movingOffsetDirection = _direction;
         }
         
     }

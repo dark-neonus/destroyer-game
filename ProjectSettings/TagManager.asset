@@ -12,6 +12,7 @@ TagManager:
   - Terrain
   - Player Trigger
   - Cannon Platform
+  - Enemy Trigger
   layers:
   - Default
   - TransparentFX

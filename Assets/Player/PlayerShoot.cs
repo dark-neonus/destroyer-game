@@ -10,18 +10,18 @@ public class PlayerShoot : MonoBehaviour
 
 
     void Update() {
-        CheckShooting();
+        _CheckShooting();
     }
 
 
 
-    private void CheckShooting() {
+    private void _CheckShooting() {
         if (Input.GetMouseButton(0)) {
-            GameObject cannon;
-            foreach (GameObject platform in cannonBase.cannonPlatforms) {
-                cannon = platform.transform.GetChild(0).gameObject;
-                if (cannon != null) {
-                    cannon.GetComponent<PlayerCannon>().Shoot();
+            GameObject cannon_;
+            foreach (GameObject platform_It in cannonBase.cannonPlatforms) {
+                cannon_ = platform_It.transform.GetChild(0).gameObject;
+                if (cannon_ != null) {
+                    cannon_.GetComponent<PlayerCannon>().Shoot();
                 }
             }
         }

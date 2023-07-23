@@ -19,7 +19,7 @@ public class TileInfo : MonoBehaviour
     };
 
     [SerializeField]
-    private Collider2D[] colliders;
+    private Collider2D[] _colliders;
 
     public float height;
     public float moisture;
@@ -37,13 +37,13 @@ public class TileInfo : MonoBehaviour
 
     public void ResizeColliders()
     {
-        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        BoxCollider2D[] colliders = GetComponents<BoxCollider2D>();
+        SpriteRenderer spriteRenderer_ = GetComponent<SpriteRenderer>();
+        BoxCollider2D[] colliders_ = GetComponents<BoxCollider2D>();
 
-        foreach (BoxCollider2D collider in colliders) {
-            if (spriteRenderer != null && collider != null)
+        foreach (BoxCollider2D collider_It in colliders_) {
+            if (spriteRenderer_ != null && collider_It != null)
             {
-                collider.size = spriteRenderer.bounds.size;
+                collider_It.size = spriteRenderer_.bounds.size;
             }
         }
     }

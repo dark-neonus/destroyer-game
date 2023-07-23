@@ -13,9 +13,9 @@ public class EnemyBulletTest : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision_)
     {
-        if (collision.tag == "Player") {
+        if (collision_.tag == "Player Trigger" || collision_.tag == "Player Collider") {
             PlayerStats.playerStats.DealDamage(damage);
             Destroy(gameObject);
         }

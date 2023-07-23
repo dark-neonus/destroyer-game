@@ -12,18 +12,18 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, lifeTime);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision_)
     {
-        if (collision.tag == "Enemy Collider") {
-            EnemyRecieveDamage enemy = collision.gameObject.GetComponentInParent<EnemyRecieveDamage>();
+        if (collision_.tag == "Enemy Collider") {
+            EnemyManager enemy = collision_.gameObject.GetComponentInParent<EnemyManager>();
             if (enemy != null) {
                 enemy.DealDamage(damage);
                 Destroy(gameObject);
             }
             
         }
-        else if (collision.tag == "Enemy Projectile") {
-            Destroy(collision.gameObject);
+        else if (collision_.tag == "Enemy Projectile") {
+            Destroy(collision_.gameObject);
             Destroy(gameObject);
         }
     }

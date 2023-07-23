@@ -3,31 +3,56 @@ using UnityEngine;
 
 public class EnemyCannon : MonoBehaviour
 {
-    public Transform player;
-    public float viewDistance;
+    [HideInInspector]
+    private EnemyManager _enemyManager;
     public float rotationSmooth;
+    private float _angleToPlayer;
 
-    void Start()
-    {
-        player = GameObject.FindWithTag("Player").transform;
+    public Transform projectileSpawner;
+    public GameObject projectile;
+    public float projectileForce;
+    public float cooldown;
+    private float _currentCooldown;
+
+    void Start() {
+        _currentCooldown = 0;
+        _enemyManager = GetComponentInParent<EnemyManager>();
     }
 
     void Update()
     {
-        RotateToPlayer();
+        _InteractWithPlayer();
+        _currentCooldown = Mathf.Max(0, _currentCooldown - Time.deltaTime);
     }
 
-    private void RotateToPlayer()
+    private void _InteractWithPlayer()
     {
-        if (player != null) {
-            if (Vector2.Distance(transform.position, player.position) <= viewDistance)
-            {
-                Vector2 direction = player.position - transform.position;
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
+        if (_enemyManager.isSeePlayer)
+        {
+            _Rotate();
+            _Shoot();
+        }
+    }
 
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSmooth * Time.deltaTime);
-            }
+    private void _Rotate() {
+        Vector2 direction_ = _enemyManager.player.position - transform.position;
+        _angleToPlayer = Mathf.Atan2(direction_.y, direction_.x) * Mathf.Rad2Deg;
+        Quaternion targetRotation_ = Quaternion.Euler(0f, 0f, _angleToPlayer);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation_, rotationSmooth * Time.deltaTime);
+    }
+
+    public void _Shoot() {
+        if (_currentCooldown == 0) {
+            GameObject bullet = Instantiate(projectile, projectileSpawner.transform.position, transform.rotation);
+
+            Vector2 direction_ = (_enemyManager.player.transform.position - transform.position).normalized;
+            bullet.GetComponent<Rigidbody2D>().velocity = direction_ * projectileForce;
+
+            _currentCooldown = cooldown;
+
+            // if (!_isKickbacking) {
+            //     StartCoroutine(Kickback());
+            // }
         }
     }
 }

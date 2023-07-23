@@ -14,39 +14,39 @@ public class CameraMechanics : MonoBehaviour
     public float minZoom;
     public float maxZoom;
 
-    private float scrollInput;
-    private Vector3 velocity = Vector3.zero;
+    private float _scrollInput;
+    private Vector3 _velocity = Vector3.zero;
 
     void FixedUpdate()
     { 
-        FollowPlayer();
+        _FollowPlayer();
     }
 
     void Update()
     {
-        Zooming();
+        _Zooming();
     }
 
-    private void FollowPlayer() {
+    private void _FollowPlayer() {
         if (player != null) {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = Vector3.SmoothDamp(transform.position, Vector3.Lerp(player.position, mousePosition, magnetToMouse) + offset, ref velocity, smooth * Time.deltaTime);
+            Vector3 mousePosition_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = Vector3.SmoothDamp(transform.position, Vector3.Lerp(player.position, mousePosition_, magnetToMouse) + offset, ref _velocity, smooth * Time.deltaTime);
         }
     } 
 
-    private void Zooming() {
+    private void _Zooming() {
         // Get the mouse wheel input
-        scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        _scrollInput = Input.GetAxis("Mouse ScrollWheel");
 
-        if (scrollInput != 0) {
+        if (_scrollInput != 0) {
             // Calculate the new zoom level based on the scroll input
-            float newZoom = Camera.main.orthographicSize - scrollInput * zoomSpeed;
+            float newZoom_ = Camera.main.orthographicSize - _scrollInput * zoomSpeed;
 
             // Clamp the zoom level to the defined range
-            newZoom = Mathf.Clamp(newZoom, minZoom, maxZoom);
+            newZoom_ = Mathf.Clamp(newZoom_, minZoom, maxZoom);
 
             // Apply the new zoom level to the camera's orthographic size
-            Camera.main.orthographicSize = newZoom;
+            Camera.main.orthographicSize = newZoom_;
         }
     }
 }

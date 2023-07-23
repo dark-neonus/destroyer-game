@@ -133,7 +133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 170
-  body: {fileID: 801333785401114815}
   cannonPlatforms:
   - {fileID: 8707375846316261726}
   - {fileID: 1269764918721149766}
@@ -181,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.5}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &4180384318271583111
 GameObject:
@@ -318,7 +317,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.375, y: 0.375}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &3262885764947951397
 MonoBehaviour:
@@ -367,7 +366,7 @@ Transform:
   - {fileID: 3873612747813127072}
   - {fileID: 801333785401114815}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3928496296027168774
 Rigidbody2D:

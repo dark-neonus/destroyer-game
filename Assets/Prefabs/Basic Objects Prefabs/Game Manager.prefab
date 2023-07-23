@@ -44,15 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb793a993bbc70bcb0613ef83d0a284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerReference: {fileID: 44572525261670382, guid: b08b0e3f840782314a3c825b5989779c, type: 3}
-  health: 0
-  maxHealth: 200
-  healthBarSlider: {fileID: 0}
-  healthText: {fileID: 0}
-  playerCannonBasePrefabs:
-  - {fileID: 1895718776568318050, guid: 650dc6097144a5d979a9cea2b96d8391, type: 3}
-  - {fileID: 5079646583942548706, guid: 42cfe11fe5fbd8f29a654b001caa3069, type: 3}
+  playerReferences:
+  - {fileID: 9104257279979247364, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+  - {fileID: 441444520424261857, guid: 8f66fc593dd81f8a596c968781cf54df, type: 3}
+  - {fileID: 6351436567908470573, guid: 651124fdfdfeed2de83a72889830293f, type: 3}
   playerLevel: 0
   playerCannonPrefabs:
   - {fileID: 4936963118146668458, guid: 17cbd0f89716c57b5b2b921b93dc6e39, type: 3}
-  selectedCannonIndices: 0000000000000000
+  selectedCannonIndices: 000000000000000000000000
+  health: 0
+  maxHealth: 20000
+  healthBarSlider: {fileID: 0}
+  healthText: {fileID: 0}

@@ -53,9 +53,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.5188396"
-     inkscape:cx="-30.838047"
-     inkscape:cy="344.03696"
+     inkscape:zoom="1.4675"
+     inkscape:cx="40.88586"
+     inkscape:cy="65.758092"
      inkscape:window-width="1920"
      inkscape:window-height="946"
      inkscape:window-x="0"
@@ -91,7 +91,8 @@
        empcolor="#009900"
        empopacity="0.30196078"
        originx="0"
-       originy="0" />
+       originy="0"
+       dotted="true" />
   </sodipodi:namedview>
   <defs
      id="defs1412" />

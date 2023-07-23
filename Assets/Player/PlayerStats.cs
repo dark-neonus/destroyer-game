@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,8 +10,9 @@ public class PlayerStats : MonoBehaviour
     public List<GameObject> playerReferences;
     public int playerLevel;
 
-    private int tmpLevel;
-    private GameObject player;
+    private int _tmpLevel;
+    private GameObject _player;
+    private Transform _playerTransform;
 
     public List<GameObject> playerCannonPrefabs;
     public List<int> selectedCannonIndices;
@@ -39,13 +39,15 @@ public class PlayerStats : MonoBehaviour
         health = maxHealth;
         // healthBarSlider.value = CalculateHealthPercentage();
         // UpdateHealthText();
-        tmpLevel = playerLevel;
+        _tmpLevel = playerLevel;
+        _playerTransform = new GameObject("Player Spawn Transform").transform;
+        _playerTransform.SetPositionAndRotation(UnityEngine.Vector3.zero, UnityEngine.Quaternion.identity);
+        _playerTransform.localScale = UnityEngine.Vector3.one;
         SpawnPlayer();
         
     }
 
-    void Update()
-    {
+    void Update() {
         if (Input.GetKey(KeyCode.Alpha1))
         {
             playerLevel = 0;
@@ -58,43 +60,43 @@ public class PlayerStats : MonoBehaviour
         {
             playerLevel = 2;
         }
-        if (playerLevel != tmpLevel) {
+        if (playerLevel != _tmpLevel) {
             SpawnPlayer();
         }
-        tmpLevel = playerLevel;
+        _tmpLevel = playerLevel;
     }
 
-    public void DealDamage(float damage) {
-        health -= damage;
-        CheckDeath();
-        healthBarSlider.value = CalculateHealthPercentage();
-        UpdateHealthText();
+    public void DealDamage(float damage_) {
+        health -= damage_;
+        _CheckDeath();
+        // healthBarSlider.value = _CalculateHealthPercentage();
+        // _UpdateHealthText();
     }
 
-    public void HealCharacter(float heal) {
-        health += heal;
-        CheckOverhealth();
-        healthBarSlider.value = CalculateHealthPercentage();
-        UpdateHealthText();
+    public void HealCharacter(float heal_) {
+        health += heal_;
+        _CheckOverhealth();
+        healthBarSlider.value = _CalculateHealthPercentage();
+        _UpdateHealthText();
     }
 
-    private void CheckDeath() {
+    private void _CheckDeath() {
         if (health <= 0) {
-            Destroy(player);
+            Destroy(_player);
         }
     }
 
-    private void CheckOverhealth() {
+    private void _CheckOverhealth() {
         if (health > maxHealth) {
             health = maxHealth;
         }
     }
 
-    private float CalculateHealthPercentage() {
+    private float _CalculateHealthPercentage() {
         return (health / maxHealth);
     }
 
-    private void UpdateHealthText() {
+    private void _UpdateHealthText() {
         healthText.text = Mathf.Ceil(health).ToString() + "/" + Mathf.Ceil(maxHealth).ToString(); 
     }
 
@@ -104,47 +106,53 @@ public class PlayerStats : MonoBehaviour
         health = maxHealth;
         // healthBarSlider.value = CalculateHealthPercentage();
         // UpdateHealthText();
-        player = Instantiate(playerReferences[playerLevel]);
-        SetCannons();
-        UpdatePlayerReferences();
+        _player = Instantiate(playerReferences[playerLevel], _playerTransform.position, _playerTransform.rotation);
+        _player.transform.localScale = _playerTransform.localScale;
+
+        _SetLegs();
+        _SetCannons();
+        _UpdatePlayerReferences();
     }
 
-    private void UpdatePlayerReferences() {
-        CameraMechanics cameraFollowPlayer = GameObject.FindWithTag("MainCamera").GetComponent<CameraMechanics>();
-        if (cameraFollowPlayer != null) {
-            cameraFollowPlayer.player = player.transform;
+    private void _UpdatePlayerReferences() {
+        CameraMechanics cameraFollowPlayer_ = GameObject.FindWithTag("MainCamera").GetComponent<CameraMechanics>();
+        if (cameraFollowPlayer_ != null) {
+            cameraFollowPlayer_.player = _player.transform;
         }
-        EnemyCannon[] enemyCannons = FindObjectsOfType<EnemyCannon>();
-        foreach (EnemyCannon cannon in enemyCannons) {
-            cannon.player = player.transform;
+        EnemyManager[] enemyManagerScripts_ = FindObjectsOfType<EnemyManager>();
+        foreach (EnemyManager enemyManagerScript_It in enemyManagerScripts_) {
+            enemyManagerScript_It.player = _player.transform;
         }
-        EnemyTestShoot[] shotingScripts = FindObjectsOfType<EnemyTestShoot>();
-        foreach (EnemyTestShoot shotingScript in shotingScripts) {
-            shotingScript.player = player.transform;
-        }
-        EnemyMovement[] enemyMovementScripts = FindObjectsOfType<EnemyMovement>();
-        foreach (EnemyMovement enemyMovementScript in enemyMovementScripts) {
-            enemyMovementScript.player = player.transform;
+        
+    }
+
+    private void _SetLegs() {
+        LegScript[] legScripts_ = _player.GetComponentsInChildren<LegScript>();
+        foreach (LegScript legScript_It in legScripts_) {
+            legScript_It.InitLegsPosition();
         }
     }
 
     public void SpawnPlayer() {
-        player = GameObject.FindWithTag("Player");
-        if (player != null) {
-            Destroy(player);
-            foreach (Transform child in transform) {
-	            GameObject.Destroy(child.gameObject);
+        _player = GameObject.FindWithTag("Player");
+        if (_player != null) {
+            _playerTransform.SetPositionAndRotation(_player.transform.position, _player.transform.rotation);
+            _playerTransform.localScale = _player.transform.localScale;
+
+            Destroy(_player);
+            foreach (Transform child_It in _player.transform) {
+	            GameObject.Destroy(child_It.gameObject);
             }
         }
         PlayerInit();
     }
 
-    private void SetCannons() {
-        List<GameObject> cannonPlatforms = player.GetComponentInChildren<CannonBase>().gameObject.GetComponent<CannonBase>().cannonPlatforms;
+    private void _SetCannons() {
+        List<GameObject> cannonPlatforms_ = _player.GetComponentInChildren<CannonBase>().gameObject.GetComponent<CannonBase>().cannonPlatforms;
 
-        for (int i = 0; i < Mathf.Min(cannonPlatforms.Count, selectedCannonIndices.Count); i++) {
+        for (int i = 0; i < Mathf.Min(cannonPlatforms_.Count, selectedCannonIndices.Count); i++) {
             if (playerCannonPrefabs[selectedCannonIndices[i]] != null) {
-                Instantiate(playerCannonPrefabs[selectedCannonIndices[i]], cannonPlatforms[i].transform);
+                Instantiate(playerCannonPrefabs[selectedCannonIndices[i]], cannonPlatforms_[i].transform);
             }
         } 
     }

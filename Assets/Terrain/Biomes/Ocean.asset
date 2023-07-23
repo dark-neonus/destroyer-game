@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ocean
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 677248559, guid: 206366a6c71e1f4fe9011aa84ab4ca65, type: 3}
+  - {fileID: 258453255, guid: 69720180d3d6b2cc786671078bbe69d0, type: 3}
   biomeName: Ocean
   heightMatter: 1
   minHeight: 0
