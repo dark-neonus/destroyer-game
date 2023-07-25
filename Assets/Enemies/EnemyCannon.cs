@@ -13,6 +13,7 @@ public class EnemyCannon : MonoBehaviour
     public float projectileForce;
     public float cooldown;
     private float _currentCooldown;
+    private bool _isCanShootPlayer;
 
     void Start() {
         _currentCooldown = 0;
@@ -21,15 +22,18 @@ public class EnemyCannon : MonoBehaviour
 
     void Update()
     {
+        _CheckPlayerView();
         _InteractWithPlayer();
         _currentCooldown = Mathf.Max(0, _currentCooldown - Time.deltaTime);
     }
 
     private void _InteractWithPlayer()
     {
-        if (_enemyManager.isSeePlayer)
-        {
+        if (_enemyManager.isPlayerInViewDistance) {
             _Rotate();
+        }
+        if (_isCanShootPlayer)
+        {
             _Shoot();
         }
     }
@@ -53,6 +57,32 @@ public class EnemyCannon : MonoBehaviour
             // if (!_isKickbacking) {
             //     StartCoroutine(Kickback());
             // }
+        }
+    }
+
+    private void _CheckPlayerView() {
+        if (_enemyManager.isPlayerInViewDistance) {
+            _isCanShootPlayer = false;
+            Vector2 direction_ = _enemyManager.player.position - projectileSpawner.position;
+
+            RaycastHit2D[] hits_ = Physics2D.RaycastAll(projectileSpawner.position, direction_, Mathf.Infinity, _enemyManager.projectileDestroyerLayer);
+
+            System.Array.Sort(hits_, (x, y) => x.distance.CompareTo(y.distance));
+
+            foreach (var hit_It in hits_)
+            {
+                if (hit_It.collider.gameObject.layer == LayerMask.NameToLayer("Projectile Destroyer")) {
+                    Debug.DrawRay(projectileSpawner.position, hit_It.point - (Vector2)projectileSpawner.position, Color.blue);
+                    Debug.Log("Mountain");
+                    break;
+                }
+                else if (hit_It.collider.tag == "Player Trigger") {
+                    Debug.DrawRay(projectileSpawner.position, direction_, Color.red);
+                    _isCanShootPlayer = true;
+                    Debug.Log("Player");
+                    break;
+                }
+            }
         }
     }
 }

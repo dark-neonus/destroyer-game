@@ -22,7 +22,6 @@ public class EnemyBody : MonoBehaviour
     }
 
     void Update() {
-        CheckPlayerView();
         _Rotate();
     }
     
@@ -41,15 +40,13 @@ public class EnemyBody : MonoBehaviour
         {
             _enemyManager.isPlayerInViewDistance = true;
 
-            if (_enemyManager.isSeePlayer) {
-                if (_distanceToPlayer < _enemyManager.minDistance)
-                {
-                    _direction = (transform.position - _enemyManager.player.position).normalized;
-                } 
-                else if (_distanceToPlayer > _enemyManager.maxDistance)
-                {
-                    _direction = (_enemyManager.player.position - transform.position).normalized;
-                }
+            if (_distanceToPlayer < _enemyManager.minDistance)
+            {
+                _direction = (transform.position - _enemyManager.player.position).normalized;
+            } 
+            else if (_distanceToPlayer > _enemyManager.maxDistance)
+            {
+                _direction = (_enemyManager.player.position - transform.position).normalized;
             }
         }
         else {
@@ -76,29 +73,5 @@ public class EnemyBody : MonoBehaviour
         
     }
 
-    private void CheckPlayerView() {
-        if (_enemyManager.isPlayerInViewDistance) {
-            _enemyManager.isSeePlayer = false;
-            Vector2 direction_ = _enemyManager.player.position - transform.position;
-
-            RaycastHit2D[] hits_ = Physics2D.RaycastAll(transform.position, direction_, Mathf.Infinity, _enemyManager.projectileDestroyerLayer);
-
-            System.Array.Sort(hits_, (x, y) => x.distance.CompareTo(y.distance));
-
-            foreach (var hit_It in hits_)
-            {
-                if (hit_It.collider.gameObject.layer == LayerMask.NameToLayer("Projectile Destroyer")) {
-                    Debug.DrawRay(transform.position, hit_It.point - (Vector2)transform.position, Color.red);
-                    Debug.Log("Mountain");
-                    break;
-                }
-                else if (hit_It.collider.tag == "Player Trigger") {
-                    Debug.DrawRay(transform.position, direction_, Color.red);
-                    _enemyManager.isSeePlayer = true;
-                    Debug.Log("Player");
-                    break;
-                }
-            }
-        }
-    }
+    
 }

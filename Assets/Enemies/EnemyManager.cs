@@ -20,8 +20,6 @@ public class EnemyManager : MonoBehaviour
     [HideInInspector]
     public bool isPlayerInViewDistance;
     [HideInInspector]
-    public bool isSeePlayer;
-    [HideInInspector]
     public LayerMask projectileDestroyerLayer;
     
     void Start() {
