@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7775079419342944879}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Platform 1
   m_TagString: Cannon Platform
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 264521517150122747}
   - component: {fileID: 8552338597342116582}
   - component: {fileID: 5609050578290887614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Base
   m_TagString: Player Trigger
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -343,8 +343,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3696395271221351674}
   - component: {fileID: 3928496296027168774}
-  - component: {fileID: 5036796656130916673}
-  m_Layer: 0
+  - component: {fileID: 7810007826884714247}
+  m_Layer: 7
   m_Name: Player 2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5036796656130916673
+--- !u!114 &7810007826884714247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,10 +404,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6351436567908470573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e797c4c3aa5f4649eb93c86e88cc9a91, type: 3}
+  m_Script: {fileID: 11500000, guid: ab614c10d4cac5ef2ab95d0dc0aa5eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannonBase: {fileID: 8552338597342116582}
+  _rbVelocity: {x: 0, y: 0}
+  canStepOnOcean: 0
 --- !u!1 &7897741325551696752
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8195480049058221689}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Platform 2
   m_TagString: Cannon Platform
   m_Icon: {fileID: 0}
@@ -448,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8253636025300899169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Platform 0
   m_TagString: Cannon Platform
   m_Icon: {fileID: 0}

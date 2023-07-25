@@ -18,12 +18,17 @@ public class EnemyManager : MonoBehaviour
     public float maxDistance;
 
     [HideInInspector]
+    public bool isPlayerInViewDistance;
+    [HideInInspector]
     public bool isSeePlayer;
+    [HideInInspector]
+    public LayerMask projectileDestroyerLayer;
     
     void Start() {
         health = maxHealth;
         healthBarSlider.value = _CalculateHealthPercentage();
-        isSeePlayer = false;
+        isPlayerInViewDistance = false;
+        projectileDestroyerLayer = LayerMask.GetMask("Ground", "Projectile Destroyer");
 
     }
     public void DealDamage(float damage_) {

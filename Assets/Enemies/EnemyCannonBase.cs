@@ -17,10 +17,11 @@ public class EnemyCannonBase : MonoBehaviour
     void Update()
     {
         _RotateToPlayer();
+        Vector2 direction_ = _enemyManager.player.position - transform.position;
     }
 
     private void _RotateToPlayer() {
-        if (Vector3.Distance(transform.position, _enemyManager.player.position) <= _enemyManager.viewDistance) {
+        if (_enemyManager.isSeePlayer) {
             Vector2 direction_ = _enemyManager.player.position - transform.position;
 
             float angle_ = Mathf.MoveTowardsAngle(transform.eulerAngles.z, Mathf.Atan2(direction_.y, direction_.x) * Mathf.Rad2Deg, rotationSpeed * Time.deltaTime );

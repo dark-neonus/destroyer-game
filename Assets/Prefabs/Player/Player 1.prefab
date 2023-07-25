@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7494178817031159306}
   - component: {fileID: 9033725307263857434}
-  - component: {fileID: 2885137573802396123}
-  m_Layer: 0
+  - component: {fileID: 2024876378121674605}
+  m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2885137573802396123
+--- !u!114 &2024876378121674605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,10 +71,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 441444520424261857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e797c4c3aa5f4649eb93c86e88cc9a91, type: 3}
+  m_Script: {fileID: 11500000, guid: ab614c10d4cac5ef2ab95d0dc0aa5eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannonBase: {fileID: 6525471073144379732}
+  _rbVelocity: {x: 0, y: 0}
+  canStepOnOcean: 0
 --- !u!1 &2156688569713912307
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +237,7 @@ GameObject:
   - component: {fileID: 6230277766074281073}
   - component: {fileID: 6525471073144379732}
   - component: {fileID: 8538536713069657817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Base
   m_TagString: Player Trigger
   m_Icon: {fileID: 0}
@@ -357,7 +358,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -382,7 +383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2293428611317209565}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Platform 0
   m_TagString: Cannon Platform
   m_Icon: {fileID: 0}
@@ -413,7 +414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7174173290765761479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Platform 1
   m_TagString: Cannon Platform
   m_Icon: {fileID: 0}

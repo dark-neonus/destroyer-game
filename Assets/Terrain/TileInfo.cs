@@ -43,8 +43,9 @@ public class TileInfo : MonoBehaviour
         foreach (BoxCollider2D collider_It in colliders_) {
             if (spriteRenderer_ != null && collider_It != null)
             {
-                collider_It.size = spriteRenderer_.bounds.size;
+                collider_It.size = spriteRenderer_.bounds.size * 1.1f;
             }
         }
     }
+    
 }

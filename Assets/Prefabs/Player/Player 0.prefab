@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2181102901990714051}
   - component: {fileID: 8120866456127648303}
   - component: {fileID: 2294871495968639197}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Base
   m_TagString: Player Trigger
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7607236817050218237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cannon Platform 0
   m_TagString: Cannon Platform
   m_Icon: {fileID: 0}
@@ -337,8 +337,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2892792313048810429}
   - component: {fileID: 959472673816144612}
-  - component: {fileID: 5092990630581783393}
-  m_Layer: 0
+  - component: {fileID: 8207480148496411742}
+  m_Layer: 7
   m_Name: Player 0
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5092990630581783393
+--- !u!114 &8207480148496411742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -398,10 +398,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9104257279979247364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e797c4c3aa5f4649eb93c86e88cc9a91, type: 3}
+  m_Script: {fileID: 11500000, guid: ab614c10d4cac5ef2ab95d0dc0aa5eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannonBase: {fileID: 8120866456127648303}
+  _rbVelocity: {x: 0, y: 0}
+  canStepOnOcean: 0
 --- !u!1001 &1311963897854689433
 PrefabInstance:
   m_ObjectHideFlags: 0

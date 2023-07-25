@@ -12,19 +12,34 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, lifeTime);
     }
 
-    void OnTriggerEnter2D(Collider2D collision_)
+    void OnTriggerEnter2D(Collider2D collider_)
     {
-        if (collision_.tag == "Enemy Collider") {
-            EnemyManager enemy = collision_.gameObject.GetComponentInParent<EnemyManager>();
+        if (collider_.tag == "Enemy Collider") {
+            EnemyManager enemy = collider_.gameObject.GetComponentInParent<EnemyManager>();
             if (enemy != null) {
                 enemy.DealDamage(damage);
-                Destroy(gameObject);
+                DestroyProjectile();
             }
             
         }
-        else if (collision_.tag == "Enemy Projectile") {
-            Destroy(collision_.gameObject);
-            Destroy(gameObject);
+        else if (collider_.tag == "Enemy Projectile") {
+            collider_.GetComponent<EnemyBulletTest>().DestroyProjectile();
+            DestroyProjectile();
         }
+        else if (collider_.gameObject.layer == LayerMask.NameToLayer("Projectile Destroyer")) {
+            DestroyProjectile();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collider_) {
+        OnTriggerEnter2D(collider_);
+    }
+
+    private void OnTriggerExit2D(Collider2D collider_) {
+        OnTriggerEnter2D(collider_);
+    }
+
+    public void DestroyProjectile() {
+        Destroy(gameObject);
     }
 }

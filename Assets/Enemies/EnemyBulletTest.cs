@@ -13,11 +13,26 @@ public class EnemyBulletTest : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D collision_)
+    private void OnTriggerEnter2D(Collider2D collider_)
     {
-        if (collision_.tag == "Player Trigger" || collision_.tag == "Player Collider") {
+        if (collider_.tag == "Player Trigger" || collider_.tag == "Player Collider") {
             PlayerStats.playerStats.DealDamage(damage);
-            Destroy(gameObject);
+            DestroyProjectile();
         }
+        else if (collider_.gameObject.layer == LayerMask.NameToLayer("Projectile Destroyer")) {
+            DestroyProjectile();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collider_) {
+        OnTriggerEnter2D(collider_);
+    }
+
+    private void OnTriggerExit2D(Collider2D collider_) {
+        OnTriggerEnter2D(collider_);
+    }
+
+    public void DestroyProjectile() {
+        Destroy(gameObject);
     }
 }

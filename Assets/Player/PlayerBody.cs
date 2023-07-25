@@ -4,13 +4,13 @@ public class PlayerBody : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
-    private UnityEngine.Vector2 _direction;
+    private Vector2 _direction;
 
-    private Rigidbody2D _rb;
+    private PlayerManager _playerManager;
 
     void Start()
     {
-        _rb = GetComponentInParent<Rigidbody2D>();
+        _playerManager = GetComponentInParent<PlayerManager>();
     }
 
     void Update() {
@@ -26,7 +26,7 @@ public class PlayerBody : MonoBehaviour
 
     private void _Move() {
         // transform.Translate(direction * speed * Time.deltaTime);    
-        _rb.velocity = _direction * speed;   
+        _playerManager._rbVelocity = _direction * speed;   
     }
 
     private void _Rotate()
