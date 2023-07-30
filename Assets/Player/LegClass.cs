@@ -12,6 +12,9 @@ public class LegClass : MonoBehaviour
     public float minBaseDistance;
     public float moveSpeed;
 
+    public float randomOffset;
+    private Vector2 randomOffsetTmp;
+
     public Transform limb1;
     public Transform limb2;
 
@@ -33,12 +36,13 @@ public class LegClass : MonoBehaviour
         legEnd.position = _staticLegPosition;
         if ((oppositeLeg == null || oppositeLeg.isGrounded) && isGrounded && (Vector2.Distance(legEnd.position, target.position) > maxDistance || Vector2.Distance(legEnd.position, limb1.transform.position) > _maxLimbLen || Vector2.Distance(legEnd.position, limb1.transform.position) < minBaseDistance)) {
             isGrounded = false;
+            randomOffsetTmp = new Vector2(Random.Range(-randomOffset, randomOffset), Random.Range(-randomOffset, randomOffset));
         }
         
         if (!isGrounded) {
             _staticLegPosition += (Vector2)transform.position - _posTmp;
-            _staticLegPosition = Vector2.MoveTowards(_staticLegPosition, target.position, moveSpeed);
-            if (_staticLegPosition == (Vector2)target.position) {
+            _staticLegPosition = Vector2.MoveTowards(_staticLegPosition, (Vector2)target.position + randomOffsetTmp, moveSpeed);
+            if (_staticLegPosition == (Vector2)target.position + randomOffsetTmp) {
                 isGrounded = true;
             }
         }
