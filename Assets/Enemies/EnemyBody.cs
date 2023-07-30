@@ -7,6 +7,8 @@ public class EnemyBody : MonoBehaviour
     [HideInInspector]
     private EnemyManager _enemyManager;
 
+    public float originalMoveSpeed;
+    [HideInInspector]
     public float moveSpeed;
     public float rotationSpeed;
 
@@ -22,13 +24,14 @@ public class EnemyBody : MonoBehaviour
     }
 
     void Update() {
-        _Rotate();
+        _HandleViewDistance();
     }
     
 
     void FixedUpdate()
     {
         _Move();
+        _Rotate();
         _ShiftLegs();
     }
 
@@ -48,6 +51,9 @@ public class EnemyBody : MonoBehaviour
             {
                 _direction = (_enemyManager.player.position - transform.position).normalized;
             }
+            else {
+                _enemyManager.isAngry = false;
+            }
         }
         else {
             _enemyManager.isPlayerInViewDistance = false;
@@ -66,11 +72,20 @@ public class EnemyBody : MonoBehaviour
     }
 
     private void _ShiftLegs() {
-        LegScript[] legScripts_ = GetComponentsInChildren<LegScript>();
-        foreach (LegScript legScript_It in legScripts_) {
+        WalkerLeg[] legScripts_ = GetComponentsInChildren<WalkerLeg>();
+        foreach (WalkerLeg legScript_It in legScripts_) {
             legScript_It.movingOffsetDirection = _direction;
         }
         
+    }
+
+    private void _HandleViewDistance() {
+        if (_enemyManager.isAngry) {
+            _enemyManager.viewDistance = _enemyManager.originalViewDistance * 3;
+        }
+        else {
+            _enemyManager.viewDistance = _enemyManager.originalViewDistance;
+        }
     }
 
     

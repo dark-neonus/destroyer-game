@@ -69,7 +69,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -110,5 +110,5 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -10}
   magnetToMouse: 0.2
   zoomSpeed: 25
-  minZoom: 3
+  minZoom: 1
   maxZoom: 100

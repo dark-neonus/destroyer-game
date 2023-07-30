@@ -9,7 +9,7 @@
    id="svg1415"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
    sodipodi:docname="new-player.svg"
-   inkscape:export-filename="../e094e3a1/new-player-cannons.png"
+   inkscape:export-filename="../8a95796d/new-player-legs.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -20,26 +20,80 @@
      id="g6399"
      inkscape:label="player-leg"
      transform="translate(-240,-70)"
-     style="display:none">
+     style="display:inline">
     <g
        id="g6402"
-       inkscape:label="test"
-       transform="matrix(1.3333333,0,0,1.6666666,-79.999999,-46.666665)">
+       inkscape:label="walker-01"
+       transform="matrix(1.3333333,0,0,1.6666666,-79.999999,-46.666665)"
+       style="display:inline">
       <path
          id="rect6406"
          style="fill:#333333;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
-         d="m 240,70 90,10 v 40 l -90,10 z"
+         d="m 240,70 97.50001,6.000006 V 124 L 240,130 Z"
          sodipodi:nodetypes="ccccc" />
       <path
          id="rect7135"
          style="fill:#666666;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
-         d="m 340,70 h 20 l 10,10 v 40 l -10,10 H 340 L 330,120 V 80 Z"
+         d="m 415.00001,70 h 20 l 7.5,12.000002 V 118 l -7.5,12 h -20 l -10,-12 V 82.000002 Z"
          sodipodi:nodetypes="ccccccccc" />
       <path
          id="rect7192"
          style="fill:#4d4d4d;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
-         d="m 360,70 30,20 v 20 l -30,20 10,-10 V 80 Z"
+         d="m 435.00001,70 30,20 v 20 l -30,20 7.5,-12 V 82.000002 Z"
          sodipodi:nodetypes="ccccccc" />
+      <rect
+         style="display:inline;fill:#4d4d4d;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect1146"
+         width="15"
+         height="48"
+         x="337.5"
+         y="76" />
+      <path
+         id="path1175"
+         style="fill:#333333;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 352.50001,82.000006 52.5,-4e-6 V 118 h -52.5 z"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="g9998"
+       inkscape:label="crawler-01"
+       transform="translate(240,70)">
+      <path
+         id="rect9269"
+         style="fill:#333333;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 0,100 130,20 20,10 v 40 L 130,180 0,200 Z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         id="rect10781"
+         style="display:inline;fill:#333333;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         transform="translate(-240,-70)"
+         d="m 400,190 60,-10 80,30 v 20 l -80,30 -60,-10 -10,-10 v -40 z"
+         sodipodi:nodetypes="ccccccccc" />
+      <path
+         id="rect10785"
+         style="fill:#4d4d4d;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 20,120 20,10 v 40 l -20,10 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path10788"
+         style="fill:#4d4d4d;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 70,130 20,10 v 20 l -20,10 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path10790"
+         style="fill:#4d4d4d;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 200,130 20,-10 v 60 l -20,-10 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path10792"
+         style="fill:#4d4d4d;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 250,130 20,10 v 20 l -20,10 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path10870"
+         style="fill:#4d4d4d;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 160,130 h 20 v 40 h -20 z"
+         sodipodi:nodetypes="ccccc" />
     </g>
   </g>
   <sodipodi:namedview
@@ -53,15 +107,15 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="1.4675"
-     inkscape:cx="40.88586"
-     inkscape:cy="65.758092"
+     inkscape:zoom="0.73375"
+     inkscape:cx="-110.39182"
+     inkscape:cy="386.37138"
      inkscape:window-width="1920"
      inkscape:window-height="946"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1415"
+     inkscape:current-layer="g6402"
      inkscape:lockguides="false">
     <inkscape:grid
        type="xygrid"
@@ -204,7 +258,7 @@
   <g
      id="g4877"
      inkscape:label="player-cannons"
-     style="display:inline">
+     style="display:none">
     <g
        id="g4921"
        inkscape:label="test"
@@ -229,6 +283,114 @@
          style="fill:#666666;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
          d="m 280,70 h 20 V 30 h -20 l -10,10 v 20 l 10,10"
          sodipodi:nodetypes="ccccccc" />
+    </g>
+    <g
+       id="g954"
+       inkscape:label="test-ammo"
+       style="display:inline"
+       transform="matrix(1,0,0,0.5,0,25)">
+      <path
+         id="rect950"
+         style="display:inline;fill:#00ffff;fill-opacity:1;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 310,30 h 80 l 10,10 V 60 L 390,70 H 310 L 300,60 V 40 Z"
+         sodipodi:nodetypes="ccccccccc" />
+      <path
+         id="rect2018"
+         style="display:inline;fill:#ffffff;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 320,40 h 60 l 10,10 -10,10 H 320 L 310,50 Z"
+         sodipodi:nodetypes="ccccccc" />
+    </g>
+    <g
+       id="g837"
+       inkscape:label="rocket-launcher">
+      <path
+         id="rect943"
+         style="fill:#808080;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 0,128 20,-28 h 80 V 240 H 20 L 0,212 Z"
+         sodipodi:nodetypes="ccccccc" />
+      <rect
+         style="display:inline;fill:#483737;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect1151"
+         width="90.909088"
+         height="30"
+         x="100"
+         y="120" />
+      <rect
+         style="display:inline;fill:#483737;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect1151-3"
+         width="90.909088"
+         height="30"
+         x="100"
+         y="190" />
+      <rect
+         style="display:inline;fill:#6c5353;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect1151-6"
+         width="100"
+         height="40"
+         x="100"
+         y="150" />
+      <path
+         id="rect1042"
+         style="fill:#b3b3b3;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 20,156 20,-42 h 70 V 226 H 40 L 20,184 Z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         id="rect1300"
+         style="fill:#800000;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 60,130 h 20 l 10,10 v 60 L 80,210 H 60 Z"
+         sodipodi:nodetypes="ccccccc" />
+    </g>
+    <g
+       id="g5103"
+       inkscape:label="rocket-launcher-ammo"
+       style="fill:#4d4d4d"
+       transform="matrix(0.8,0,0,1,50,0)">
+      <rect
+         style="fill:#4d4d4d;fill-opacity:1;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect5100"
+         width="112.5"
+         height="20"
+         x="200"
+         y="160" />
+      <path
+         id="rect5161"
+         style="display:inline;fill:#782121;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 187.5,150 25,10 h -25 z"
+         sodipodi:nodetypes="cccc" />
+      <path
+         id="path5196"
+         style="display:inline;fill:#782121;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 187.5,190 25,-10 h -25 z"
+         sodipodi:nodetypes="cccc" />
+      <rect
+         style="fill:#782121;fill-opacity:1;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect5250"
+         width="20"
+         height="4"
+         x="200"
+         y="168"
+         transform="matrix(1.25,0,0,1,-62.5,0)" />
+      <rect
+         style="fill:#ff0000;fill-opacity:1;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect5252"
+         width="24.999998"
+         height="20"
+         x="275"
+         y="160" />
+      <rect
+         style="fill:#ff6600;fill-opacity:1;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect5373"
+         width="17.5"
+         height="20"
+         x="278.75"
+         y="160" />
+      <rect
+         style="fill:#ffd5d5;fill-opacity:1;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect5430"
+         width="6.2503934"
+         height="20"
+         x="284.37482"
+         y="160" />
     </g>
   </g>
   <g

@@ -16,7 +16,7 @@ public class EnemyBulletTest : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider_)
     {
         if (collider_.tag == "Player Trigger" || collider_.tag == "Player Collider") {
-            PlayerStats.playerStats.DealDamage(damage);
+            GameManager.gameManager.DealDamage(damage);
             DestroyProjectile();
         }
         else if (collider_.gameObject.layer == LayerMask.NameToLayer("Projectile Destroyer")) {

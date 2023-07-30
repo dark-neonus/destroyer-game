@@ -141,10 +141,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 700
-        width: 120
+        width: 220
         height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: new-enemies-leg_1
       rect:
         serializedVersion: 2
-        x: 120
+        x: 220
         y: 700
         width: 80
         height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,6 +173,48 @@ TextureImporter:
       bones: []
       spriteID: cc0d27f6b03e15d49b8fd5efca998ddb
       internalID: -525220474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new-enemies-leg_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 150
+        height: 100
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf71f734e63d8c276ac6ce9649d69e5a
+      internalID: 691883755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new-enemies-leg_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 600
+        width: 150
+        height: 100
+      alignment: 9
+      pivot: {x: 0.15, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16729e120585fa26a35070213f1b1ec
+      internalID: 23982964
       vertices: []
       indices: 
       edges: []
@@ -190,6 +232,8 @@ TextureImporter:
     nameFileIdTable:
       new-enemies-leg_0: 645069985
       new-enemies-leg_1: -525220474
+      new-enemies-leg_2: 691883755
+      new-enemies-leg_3: 23982964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

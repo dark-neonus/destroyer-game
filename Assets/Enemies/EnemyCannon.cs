@@ -22,9 +22,12 @@ public class EnemyCannon : MonoBehaviour
 
     void Update()
     {
-        _CheckPlayerView();
         _InteractWithPlayer();
         _currentCooldown = Mathf.Max(0, _currentCooldown - Time.deltaTime);
+    }
+
+    private void FixedUpdate() {
+        _CheckPlayerView();
     }
 
     private void _InteractWithPlayer()
@@ -61,28 +64,22 @@ public class EnemyCannon : MonoBehaviour
     }
 
     private void _CheckPlayerView() {
+        _isCanShootPlayer = false;
         if (_enemyManager.isPlayerInViewDistance) {
-            _isCanShootPlayer = false;
             Vector2 direction_ = _enemyManager.player.position - projectileSpawner.position;
 
-            RaycastHit2D[] hits_ = Physics2D.RaycastAll(projectileSpawner.position, direction_, Mathf.Infinity, _enemyManager.projectileDestroyerLayer);
+            RaycastHit2D hit_ = Physics2D.Raycast(projectileSpawner.position, direction_, _enemyManager.viewDistance, _enemyManager.projectileDestroyerLayer);
 
-            System.Array.Sort(hits_, (x, y) => x.distance.CompareTo(y.distance));
+            // System.Array.Sort(hits_, (x, y) => x.distance.CompareTo(y.distance));
 
-            foreach (var hit_It in hits_)
-            {
-                if (hit_It.collider.gameObject.layer == LayerMask.NameToLayer("Projectile Destroyer")) {
-                    Debug.DrawRay(projectileSpawner.position, hit_It.point - (Vector2)projectileSpawner.position, Color.blue);
-                    Debug.Log("Mountain");
-                    break;
-                }
-                else if (hit_It.collider.tag == "Player Trigger") {
-                    Debug.DrawRay(projectileSpawner.position, direction_, Color.red);
-                    _isCanShootPlayer = true;
-                    Debug.Log("Player");
-                    break;
-                }
+            if (hit_.collider != null && (hit_.collider.tag == "Player Trigger" || hit_.collider.tag == "Player Collider")) {
+                Debug.DrawRay(projectileSpawner.position, direction_, Color.red);
+                _isCanShootPlayer = true;
             }
+            else {
+                Debug.DrawRay(projectileSpawner.position, hit_.point - (Vector2)projectileSpawner.position, Color.blue);
+            }
+            
         }
     }
 }

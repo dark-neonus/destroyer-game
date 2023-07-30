@@ -22,8 +22,8 @@ public class MainMenu : MonoBehaviour
 
     public void StopGame() {
         SceneManager.LoadScene(0);
-        Destroy(PlayerStats.playerStats);
-        Destroy(PlayerStats.playerStats.gameObject);
+        Destroy(GameManager.gameManager);
+        Destroy(GameManager.gameManager.gameObject);
     }
 
     public void OpenSettings() {

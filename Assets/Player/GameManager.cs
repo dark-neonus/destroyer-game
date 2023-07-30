@@ -3,9 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PlayerStats : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static PlayerStats playerStats;
+    public static GameManager gameManager;
 
     public List<GameObject> playerReferences;
     public int playerLevel;
@@ -23,14 +23,16 @@ public class PlayerStats : MonoBehaviour
     public Slider healthBarSlider;
     public TextMeshProUGUI healthText;
 
+    [HideInInspector]
+    public List<GameObject> enemies = new List<GameObject>();
 
     void Awake()
     {
-        if (playerStats != null) {
-            Destroy(playerStats);
+        if (gameManager != null) {
+            Destroy(gameManager);
         }
         else {
-            playerStats = this;
+            gameManager = this;
         }
         DontDestroyOnLoad(this);
     }
@@ -109,7 +111,6 @@ public class PlayerStats : MonoBehaviour
         _player = Instantiate(playerReferences[playerLevel], _playerTransform.position, _playerTransform.rotation);
         _player.transform.localScale = _playerTransform.localScale;
 
-        _SetLegs();
         _SetCannons();
         _UpdatePlayerReferences();
     }
@@ -126,12 +127,6 @@ public class PlayerStats : MonoBehaviour
         
     }
 
-    private void _SetLegs() {
-        LegScript[] legScripts_ = _player.GetComponentsInChildren<LegScript>();
-        foreach (LegScript legScript_It in legScripts_) {
-            legScript_It.InitLegsPosition();
-        }
-    }
 
     public void SpawnPlayer() {
         _player = GameObject.FindWithTag("Player");
@@ -155,5 +150,24 @@ public class PlayerStats : MonoBehaviour
                 Instantiate(playerCannonPrefabs[selectedCannonIndices[i]], cannonPlatforms_[i].transform);
             }
         } 
+    }
+
+    public GameObject GetNearestEnemy(Vector3 origin_) {
+        if (enemies.Count != 0) {
+            enemies.Sort((a, b) => Vector2.Distance(origin_, a.transform.position).CompareTo(Vector2.Distance(origin_, b.transform.position)));
+            return enemies[0];
+        }
+        else {
+            return null;
+        }
+    }
+
+    public List<GameObject> GetNearestEnemyInDistance(Vector3 origin_, float allowDistance_) {
+        List<GameObject> result_ = new List<GameObject>();
+        if (enemies.Count != 0) {
+            result_ = enemies.FindAll(obj => Vector3.Distance(obj.transform.position, origin_) < allowDistance_);
+            result_.Sort((a, b) => Vector2.Distance(origin_, a.transform.position).CompareTo(Vector2.Distance(origin_, b.transform.position)));
+        }
+        return result_;
     }
 }

@@ -66,10 +66,9 @@ public class PlayerBody : MonoBehaviour
     }
 
     private void _ShiftLegs() {
-        LegScript[] legScripts_ = GetComponentsInChildren<LegScript>();
-        foreach (LegScript legScript_It in legScripts_) {
+        LegClass[] legScripts_ = GetComponentsInChildren<LegClass>();
+        foreach (LegClass legScript_It in legScripts_) {
             legScript_It.movingOffsetDirection = _direction;
         }
-        
     }
 }

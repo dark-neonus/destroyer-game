@@ -141,17 +141,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 700
-        width: 120
+        width: 220
         height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddd2803034e70342f89285020a87d967
-      internalID: -1165518023
+      spriteID: 78a6638c56feeeec28a6f6566004846c
+      internalID: -1542788014
       vertices: []
       indices: 
       edges: []
@@ -160,19 +160,61 @@ TextureImporter:
       name: new-player-legs_1
       rect:
         serializedVersion: 2
-        x: 120
+        x: 220
         y: 700
         width: 80
         height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74058ff6663d446919c4e941905f2b50
-      internalID: 1193347233
+      spriteID: 8a9e7b8a1145f454d970dacb3cd8fb0a
+      internalID: -1220401605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new-player-legs_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 150
+        height: 100
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dac257b2ffe288809483cc5edbce400
+      internalID: 668248629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new-player-legs_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 600
+        width: 150
+        height: 100
+      alignment: 9
+      pivot: {x: 0.15, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06dab6120cb290eb59bdaaef52fecc88
+      internalID: 343005460
       vertices: []
       indices: 
       edges: []
@@ -188,8 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new-player-legs_0: -1165518023
-      new-player-legs_1: 1193347233
+      new-player-legs_0: -1542788014
+      new-player-legs_1: -608529159
+      new-player-legs_2: -1220401605
+      new-player-legs_3: 668248629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

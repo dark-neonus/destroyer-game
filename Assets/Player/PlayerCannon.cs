@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCannon : MonoBehaviour
 {
-    public Transform projectileSpawner;
+    public List<Transform> projectileSpawners;
     public GameObject projectile;
     public float projectileForce;
     public float cooldown;
@@ -44,12 +44,15 @@ public class PlayerCannon : MonoBehaviour
 
     public void Shoot() {
         if (_currentCooldown == 0) {
-            GameObject bullet = Instantiate(projectile, projectileSpawner.transform.position, transform.rotation);
+            // Vector2 mousePos_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // Vector2 myPos_ = transform.position;
+            Vector2 direction_;
 
-            Vector2 mousePos_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 myPos_ = transform.position;
-            Vector2 direction_ = (mousePos_ - myPos_).normalized;
-            bullet.GetComponent<Rigidbody2D>().velocity = direction_ * projectileForce;
+            foreach (Transform projectileSpawnet_It in projectileSpawners) {
+                direction_ = projectileSpawnet_It.right.normalized;
+                GameObject bullet = Instantiate(projectile, projectileSpawnet_It.transform.position, projectileSpawnet_It.rotation);
+                bullet.GetComponent<Rigidbody2D>().velocity = direction_ * projectileForce;
+            }
 
             _currentCooldown = cooldown;
 

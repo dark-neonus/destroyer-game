@@ -13,6 +13,8 @@ public class EnemyManager : MonoBehaviour
 
     [HideInInspector]
     public Transform player;
+    public float originalViewDistance;
+    [HideInInspector]
     public float viewDistance;
     public float minDistance;
     public float maxDistance;
@@ -20,19 +22,24 @@ public class EnemyManager : MonoBehaviour
     [HideInInspector]
     public bool isPlayerInViewDistance;
     [HideInInspector]
+    public bool isAngry;
+    [HideInInspector]
     public LayerMask projectileDestroyerLayer;
     
     void Start() {
         health = maxHealth;
         healthBarSlider.value = _CalculateHealthPercentage();
         isPlayerInViewDistance = false;
-        projectileDestroyerLayer = LayerMask.GetMask("Ground", "Projectile Destroyer");
-
+        projectileDestroyerLayer = LayerMask.GetMask("Player Air","Player Ground", "Projectile Destroyer");
+        viewDistance = originalViewDistance;
+        isAngry = false;
+        GameManager.gameManager.enemies.Add(gameObject);
     }
     public void DealDamage(float damage_) {
         health -= damage_;
         _CheckDeath();
         healthBarSlider.value = _CalculateHealthPercentage();
+        isAngry = true;
     }
 
     public void HealCharacter(float heal_) {
@@ -43,6 +50,7 @@ public class EnemyManager : MonoBehaviour
 
     private void _CheckDeath() {
         if (health <= 0) {
+            GameManager.gameManager.enemies.Remove(gameObject);
             Destroy(gameObject);
         }
     }

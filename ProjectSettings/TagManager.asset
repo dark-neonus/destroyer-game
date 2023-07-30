@@ -17,17 +17,17 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - PlayerProjectiles
+  - Player Projectiles
   - Water
   - UI
   - EnemyProjectiles
   - Ground
   - Air
   - Projectile Destroyer
-  - 
-  - 
-  - 
-  - 
+  - Player Ground
+  - Player Air
+  - Enemy Ground
+  - Enemy Air
   - 
   - 
   - 

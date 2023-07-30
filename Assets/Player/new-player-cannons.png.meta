@@ -144,7 +144,7 @@ TextureImporter:
         width: 300
         height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,6 +152,69 @@ TextureImporter:
       bones: []
       spriteID: f8edd9f4351c13a35aa01e0d731d1d51
       internalID: 906814406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new-player-cannons_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 200
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f72005ea31c360a90b2ca8ee746d73
+      internalID: 123572770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new-player-cannons_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 740
+        width: 100
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97d513d58c5047279b29803cd8d8a08
+      internalID: -1031535572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new-player-cannons_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 608
+        width: 100
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 12, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0764c7dfe298df8d5b4d151abf699f76
+      internalID: 154227308
       vertices: []
       indices: 
       edges: []
@@ -168,6 +231,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       new-player-cannons_0: 906814406
+      new-player-cannons_1: 123572770
+      new-player-cannons_2: -1031535572
+      new-player-cannons_3: 154227308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

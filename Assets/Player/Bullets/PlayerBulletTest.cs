@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public float damage;
     public float lifeTime;
+
 
     void Start()
     {
@@ -32,10 +31,6 @@ public class Bullet : MonoBehaviour
     }
 
     private void OnTriggerStay2D(Collider2D collider_) {
-        OnTriggerEnter2D(collider_);
-    }
-
-    private void OnTriggerExit2D(Collider2D collider_) {
         OnTriggerEnter2D(collider_);
     }
 

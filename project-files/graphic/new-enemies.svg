@@ -9,7 +9,7 @@
    id="svg5"
    sodipodi:docname="new-enemies.svg"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
-   inkscape:export-filename="../e75a567e/new-enemies-cannon.png"
+   inkscape:export-filename="../d9cccba4/new-enemies-leg.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,14 +28,14 @@
      inkscape:document-units="mm"
      showgrid="true"
      inkscape:zoom="1.3897306"
-     inkscape:cx="99.299819"
-     inkscape:cy="128.44216"
+     inkscape:cx="70.517264"
+     inkscape:cy="155.06603"
      inkscape:window-width="1920"
      inkscape:window-height="946"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g24480">
+     inkscape:current-layer="g4135">
     <inkscape:grid
        type="xygrid"
        id="grid8534"
@@ -115,10 +115,10 @@
   <g
      id="g32355"
      inkscape:label="enemy-leg"
-     style="display:none">
+     style="display:inline">
     <g
        id="g32350"
-       inkscape:label="test">
+       inkscape:label="walker0">
       <path
          id="rect26788"
          style="display:inline;fill:#2b2200;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
@@ -127,19 +127,60 @@
       <path
          id="rect47004"
          style="fill:#aa8800;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
-         d="m 153,0 47,40 v 20 l -47,40 z"
+         d="m 253,0 47,40 v 20 l -47,40 z"
          sodipodi:nodetypes="ccccc" />
       <path
          id="rect30168"
          style="fill:#806600;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
-         d="M 120,20 136.66667,0 h 16.66666 L 170,20 v 60 l -16.66667,20 H 136.66667 L 120,80 Z"
+         d="M 220,20 236.66667,0 h 16.66666 L 270,20 v 60 l -16.66667,20 H 236.66667 L 220,80 Z"
          sodipodi:nodetypes="ccccccccc" />
+      <path
+         id="path4101"
+         style="display:inline;fill:#2b2200;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 140,20 80,10 v 40 l -80,10 z"
+         sodipodi:nodetypes="ccccc" />
+      <rect
+         style="fill:#806600;fill-opacity:1;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         id="rect4017"
+         width="20"
+         height="80"
+         x="120"
+         y="10.000001" />
+    </g>
+    <g
+       id="g4135"
+       inkscape:label="crawler0">
+      <path
+         id="rect4131"
+         style="fill:#2b2200;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 0,100 130,20 20,10 v 40 L 130,180 0,200 Z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         id="path11469"
+         style="fill:#2b2200;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 300,145 -130,-35 -20,20 v 40 l 20,20 130,-35 z"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         id="rect12979"
+         style="display:inline;fill:#806600;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 40,120 80,20 v 20 l -80,20 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path12983"
+         style="display:inline;fill:#806600;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 160,140 10,-20 v 60 l -10,-20 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path12985"
+         style="display:inline;fill:#806600;stroke:#add4ff;stroke-width:0;stroke-linejoin:bevel;paint-order:stroke fill markers"
+         d="m 190,130 60,10 v 20 l -60,10 z"
+         sodipodi:nodetypes="ccccc" />
     </g>
   </g>
   <g
      id="g50769"
      inkscape:label="enemy-cannon"
-     style="display:inline">
+     style="display:none">
     <g
        id="g50736"
        inkscape:label="test">
