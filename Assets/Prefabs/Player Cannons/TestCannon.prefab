@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpawners:
   - {fileID: 4437456769971394158}
-  projectile: {fileID: 6586769690976256954, guid: c2caad0dfd71fca17aff621d02df4ad6, type: 3}
+  projectile: {fileID: 680359497613206018, guid: c2caad0dfd71fca17aff621d02df4ad6, type: 3}
   projectileForce: 17
   cooldown: 0.2
   kickbackDuration: 0.05

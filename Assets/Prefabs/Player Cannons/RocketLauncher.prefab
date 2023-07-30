@@ -114,7 +114,7 @@ MonoBehaviour:
   - {fileID: 4437456769971394158}
   - {fileID: 6552179261708642461}
   - {fileID: 3384048793820647187}
-  projectile: {fileID: 6586769690976256954, guid: a21f08fb2aa3738dca9070c65b6c25f3, type: 3}
+  projectile: {fileID: 6586769690976256954, guid: 61b4e005ee9e1bd1493d056660b72f46, type: 3}
   projectileForce: 8
   cooldown: 0.5
   kickbackDuration: 0.2
