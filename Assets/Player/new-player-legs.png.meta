@@ -140,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 700
+        y: 1500
         width: 220
         height: 100
       alignment: 4
@@ -161,7 +161,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 220
-        y: 700
+        y: 1500
         width: 80
         height: 100
       alignment: 9
@@ -182,7 +182,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 600
+        y: 1400
         width: 150
         height: 100
       alignment: 4
@@ -203,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 150
-        y: 600
+        y: 1400
         width: 150
         height: 100
       alignment: 9

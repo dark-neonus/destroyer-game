@@ -44,6 +44,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2098849716, guid: 07785af4fb9b53d929aa0db3a81b74c4, type: 3}
     - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.5
       objectReference: {fileID: 0}
@@ -104,6 +112,14 @@ PrefabInstance:
       value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.375
       objectReference: {fileID: 0}
@@ -161,14 +177,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4640363834883093886}
     m_Modifications:
-    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
-      propertyPath: isMirror
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1280361876497821227, guid: 5ad311f81735e53e386139dc1b722440, type: 3}
       propertyPath: oppositeLeg
       value: 
@@ -221,6 +229,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leg R1
       objectReference: {fileID: 0}
+    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
+      propertyPath: isMirror
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
+      propertyPath: oppositeLeg
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -250,14 +266,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4640363834883093886}
     m_Modifications:
-    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
-      propertyPath: isMirror
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1280361876497821227, guid: 5ad311f81735e53e386139dc1b722440, type: 3}
       propertyPath: isMirror
       value: 1
@@ -314,6 +322,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leg L1
       objectReference: {fileID: 0}
+    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
+      propertyPath: isMirror
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
+      propertyPath: oppositeLeg
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -343,14 +359,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4640363834883093886}
     m_Modifications:
-    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
-      propertyPath: isMirror
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1280361876497821227, guid: 5ad311f81735e53e386139dc1b722440, type: 3}
       propertyPath: isMirror
       value: 1
@@ -407,6 +415,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leg R0
       objectReference: {fileID: 0}
+    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
+      propertyPath: isMirror
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
+      propertyPath: oppositeLeg
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -436,14 +452,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4640363834883093886}
     m_Modifications:
-    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
-      propertyPath: isMirror
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1280361876497821227, guid: 5ad311f81735e53e386139dc1b722440, type: 3}
       propertyPath: oppositeLeg
       value: 
@@ -495,6 +503,14 @@ PrefabInstance:
     - target: {fileID: 3161035880197188632, guid: 5ad311f81735e53e386139dc1b722440, type: 3}
       propertyPath: m_Name
       value: Leg L0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
+      propertyPath: isMirror
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071627444887918484, guid: d563a07e8e70c8903822e980e57a7019, type: 3}
+      propertyPath: oppositeLeg
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

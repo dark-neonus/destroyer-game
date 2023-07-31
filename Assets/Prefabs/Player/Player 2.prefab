@@ -70,14 +70,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3135896522971275585}
     m_Modifications:
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: isMirror
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6494043558548708151, guid: f613ba51c8f51b1eabb0d31306410775, type: 3}
       propertyPath: m_Name
       value: Leg R0
@@ -130,6 +122,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -30
       objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: isMirror
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: oppositeLeg
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -159,14 +159,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3135896522971275585}
     m_Modifications:
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: isMirror
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6494043558548708151, guid: f613ba51c8f51b1eabb0d31306410775, type: 3}
       propertyPath: m_Name
       value: Leg R1
@@ -219,6 +211,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -100
       objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: isMirror
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: oppositeLeg
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -252,6 +252,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1432115740, guid: 07785af4fb9b53d929aa0db3a81b74c4, type: 3}
+    - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.5
@@ -315,6 +323,14 @@ PrefabInstance:
     - target: {fileID: 7607236817050218237, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -387,14 +403,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3135896522971275585}
     m_Modifications:
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: isMirror
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6494043558548708151, guid: f613ba51c8f51b1eabb0d31306410775, type: 3}
       propertyPath: m_Name
       value: Leg L2
@@ -443,6 +451,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 130
       objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: isMirror
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: oppositeLeg
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -472,10 +488,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3135896522971275585}
     m_Modifications:
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6494043558548708151, guid: f613ba51c8f51b1eabb0d31306410775, type: 3}
       propertyPath: m_Name
       value: Leg L0
@@ -524,6 +536,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: oppositeLeg
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -553,14 +569,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3135896522971275585}
     m_Modifications:
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: isMirror
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6494043558548708151, guid: f613ba51c8f51b1eabb0d31306410775, type: 3}
       propertyPath: m_Name
       value: Leg R2
@@ -613,6 +621,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -130
       objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: isMirror
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: oppositeLeg
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -642,14 +658,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3135896522971275585}
     m_Modifications:
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: isMirror
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
-      propertyPath: oppositeLeg
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6494043558548708151, guid: f613ba51c8f51b1eabb0d31306410775, type: 3}
       propertyPath: m_Name
       value: Leg L1
@@ -697,6 +705,14 @@ PrefabInstance:
     - target: {fileID: 7298941957806347166, guid: f613ba51c8f51b1eabb0d31306410775, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: isMirror
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623964252807137781, guid: 9fa3989c34088264db227cd7c59b30fc, type: 3}
+      propertyPath: oppositeLeg
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

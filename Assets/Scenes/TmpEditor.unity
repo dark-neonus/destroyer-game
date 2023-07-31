@@ -265,42 +265,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: playerLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: playerReferences.Array.data[0]
-      value: 
-      objectReference: {fileID: 8603511594910993958, guid: fed036355eb36be9a9e259f6eb61053a, type: 3}
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: playerReferences.Array.data[1]
-      value: 
-      objectReference: {fileID: 4471896902971613404, guid: b404b856b43053e4587ee7cd20eb2ffe, type: 3}
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: playerReferences.Array.data[2]
-      value: 
-      objectReference: {fileID: 6191971877927892195, guid: 63c05a74b345d75f28893d1f50f4e8cd, type: 3}
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: playerCannonPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 4936963118146668458, guid: 17cbd0f89716c57b5b2b921b93dc6e39, type: 3}
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: playerCannonPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 4936963118146668458, guid: cd6a8949a35690eb4b7d428565cc85c8, type: 3}
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: selectedCannonIndices.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: selectedCannonIndices.Array.data[1]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
-      propertyPath: selectedCannonIndices.Array.data[2]
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7596056161338685830, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -311,15 +275,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9202264012023542189, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.39696565
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9202264012023542189, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.98894835
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9202264012023542189, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.942834
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9202264012023542189, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
       propertyPath: m_LocalRotation.w

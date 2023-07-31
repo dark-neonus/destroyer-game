@@ -62,6 +62,10 @@ public class GameManager : MonoBehaviour
         {
             playerLevel = 2;
         }
+        if (Input.GetKey(KeyCode.Alpha4))
+        {
+            playerLevel = 3;
+        }
         if (playerLevel != _tmpLevel) {
             SpawnPlayer();
         }

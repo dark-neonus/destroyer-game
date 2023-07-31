@@ -32,9 +32,9 @@ public class LegClass : MonoBehaviour
     }
 
     protected void _Step() {
-        _staticLegPosition = Vector2.ClampMagnitude(_staticLegPosition - (Vector2)limb1.position, _maxLimbLen) + (Vector2)limb1.position;
+        _staticLegPosition = Vector2.ClampMagnitude(_staticLegPosition - (Vector2)limb1.position, _maxLimbLen * transform.localScale.x) + (Vector2)limb1.position;
         legEnd.position = _staticLegPosition;
-        if ((oppositeLeg == null || oppositeLeg.isGrounded) && isGrounded && (Vector2.Distance(legEnd.position, target.position) > maxDistance || Vector2.Distance(legEnd.position, limb1.transform.position) > _maxLimbLen || Vector2.Distance(legEnd.position, limb1.transform.position) < minBaseDistance)) {
+        if ((oppositeLeg == null || oppositeLeg.isGrounded) && isGrounded && (Vector2.Distance(legEnd.position, target.position) > maxDistance || Vector2.Distance(legEnd.position, limb1.transform.position) > _maxLimbLen * transform.localScale.x || Vector2.Distance(legEnd.position, limb1.transform.position) < minBaseDistance)) {
             isGrounded = false;
             randomOffsetTmp = new Vector2(Random.Range(-randomOffset, randomOffset), Random.Range(-randomOffset, randomOffset));
         }
