@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new-player-cannons_0
+      name: test-0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1500
-        width: 300
-        height: 100
+        x: 10
+        y: 1470
+        width: 320
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,13 +157,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new-player-cannons_1
+      name: rocket-launcher-0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1360
-        width: 200
-        height: 140
+        x: 10
+        y: 1230
+        width: 220
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,13 +178,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new-player-cannons_2
+      name: test-projectile
       rect:
         serializedVersion: 2
-        x: 300
-        y: 1540
-        width: 100
-        height: 20
+        x: 800
+        y: 1560
+        width: 200
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,22 +199,64 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new-player-cannons_3
+      name: rocket-launcher-projectile
       rect:
         serializedVersion: 2
-        x: 200
-        y: 1408
-        width: 100
-        height: 42
+        x: 800
+        y: 1440
+        width: 160
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 12, z: 0, w: 10}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 0764c7dfe298df8d5b4d151abf699f76
       internalID: 154227308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: test-1
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1470
+        width: 320
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd99a87d72a71e6dbd84d4ff4ceac4a
+      internalID: -315487356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocket-launcher-1
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1230
+        width: 220
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da79b098f62e634d82f78316ecccd0e
+      internalID: -1641608625
       vertices: []
       indices: 
       edges: []
@@ -230,10 +272,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new-player-cannons_0: 906814406
-      new-player-cannons_1: 123572770
-      new-player-cannons_2: -1031535572
-      new-player-cannons_3: 154227308
+      rocket-launcher-0: 123572770
+      rocket-launcher-1: -1641608625
+      rocket-launcher-projectile: 154227308
+      test-0: 906814406
+      test-1: -315487356
+      test-projectile: -1031535572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

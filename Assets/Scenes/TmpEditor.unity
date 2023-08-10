@@ -265,6 +265,62 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: airPlayerReferences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: airPlayerReferences.Array.data[0]
+      value: 
+      objectReference: {fileID: 6010450084463215589, guid: 68e8524b7129240709c6c259ddd71d06, type: 3}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: airPlayerReferences.Array.data[1]
+      value: 
+      objectReference: {fileID: 6701796745610735502, guid: 363c5bcc0b11cb91cb00dd0574b5fe08, type: 3}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: airPlayerReferences.Array.data[2]
+      value: 
+      objectReference: {fileID: 8602124227889312965, guid: 2a4a910fde05f926aa5174e185a93813, type: 3}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: airPlayerReferences.Array.data[3]
+      value: 
+      objectReference: {fileID: 480770993331076998, guid: ec268b01ca91c295288e372001cc525e, type: 3}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: groundPlayerReferences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: selectedCannonIndices.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: selectedCannonIndices.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: selectedCannonIndices.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: selectedCannonIndices.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: groundPlayerReferences.Array.data[0]
+      value: 
+      objectReference: {fileID: 8603511594910993958, guid: fed036355eb36be9a9e259f6eb61053a, type: 3}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: groundPlayerReferences.Array.data[1]
+      value: 
+      objectReference: {fileID: 4471896902971613404, guid: b404b856b43053e4587ee7cd20eb2ffe, type: 3}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: groundPlayerReferences.Array.data[2]
+      value: 
+      objectReference: {fileID: 6191971877927892195, guid: 63c05a74b345d75f28893d1f50f4e8cd, type: 3}
+    - target: {fileID: 1941922306435862354, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
+      propertyPath: groundPlayerReferences.Array.data[3]
+      value: 
+      objectReference: {fileID: 4142131807669286583, guid: b4ab583717afe45b9a67d9532e3f181c, type: 3}
     - target: {fileID: 7596056161338685830, guid: 1558b617f240c6bbabe7caebf3865dc3, type: 3}
       propertyPath: m_Name
       value: Game Manager

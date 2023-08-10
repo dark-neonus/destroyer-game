@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5a3bbe2c8bd9a5a5b0400575f7a1450
+guid: 516eade04feeaf0ff80869d9fad85e38
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,85 +136,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new-player-legs_0
+      name: 0-Air-Player-Cannon-Base
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1469
-        width: 258
-        height: 122
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78a6638c56feeeec28a6f6566004846c
-      internalID: -1542788014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: new-player-legs_1
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 1469
-        width: 98
-        height: 122
-      alignment: 9
-      pivot: {x: 0.3, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a9e7b8a1145f454d970dacb3cd8fb0a
-      internalID: -1220401605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: new-player-legs_2
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 1289
+        x: 30
+        y: 1401
         width: 180
-        height: 122
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dac257b2ffe288809483cc5edbce400
-      internalID: 668248629
+      spriteID: b0578f6c2099e0b6abe9224e0b5f4548
+      internalID: 40311111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new-player-legs_3
+      name: 1-Air-Player-Cannon-Base
       rect:
         serializedVersion: 2
-        x: 230
-        y: 1310
-        width: 180
-        height: 100
-      alignment: 9
-      pivot: {x: 0.15, y: 0.5}
+        x: 29
+        y: 1071
+        width: 201
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06dab6120cb290eb59bdaaef52fecc88
-      internalID: 343005460
+      spriteID: c18910187b7c8de989d4ffe628cc52d4
+      internalID: 1278713945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2-Air-Player-Cannon-Base
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 731
+        width: 300
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c7960c78ef4d89883f3dc0c4f61ff6
+      internalID: 480769969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Air-Player-Cannon-Base
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1311
+        width: 440
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9581f4e34f7eebd588923840451d5ca
+      internalID: 297914862
       vertices: []
       indices: 
       edges: []
@@ -230,10 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new-player-legs_0: -1542788014
-      new-player-legs_1: -608529159
-      new-player-legs_2: -1220401605
-      new-player-legs_3: 668248629
+      0-Air-Player-Cannon-Base: 40311111
+      1-Air-Player-Cannon-Base: 1278713945
+      2-Air-Player-Cannon-Base: 480769969
+      3-Air-Player-Cannon-Base: 297914862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -138,14 +138,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.25, y: 0.25}
+    oldSize: {x: 0.275, y: 0.275}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
+  m_Size: {x: 0.275, y: 0.275}
   m_EdgeRadius: 0
 --- !u!1 &5987329811505790131
 GameObject:
@@ -300,14 +300,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.25, y: 0.25}
+    oldSize: {x: 0.275, y: 0.275}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25}
+  m_Size: {x: 0.275, y: 0.275}
   m_EdgeRadius: 0
 --- !u!114 &5778420272226656931
 MonoBehaviour:
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 959472673816144612}
   - component: {fileID: 8207480148496411742}
   m_Layer: 10
-  m_Name: Player Basic
+  m_Name: G Player Basic
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: -2098849716, guid: 07785af4fb9b53d929aa0db3a81b74c4, type: 3}
     - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_Size.y
-      value: 0.5
+      value: 0.525
       objectReference: {fileID: 0}
     - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_IsTrigger
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294871495968639197, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.5
+      value: 0.525
       objectReference: {fileID: 0}
     - target: {fileID: 2892792313048810429, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_RootOrder
@@ -113,19 +113,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_Size.x
-      value: 0.375
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_Size.y
-      value: 0.375
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.375
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8081091430755566184, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.375
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8120866456127648303, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: cannonPlatforms.Array.size
@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 8361785481807105145}
     - target: {fileID: 9104257279979247364, guid: e694400df1b24eeea82ff4df3e86fb1f, type: 3}
       propertyPath: m_Name
-      value: Player 1
+      value: G Player 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

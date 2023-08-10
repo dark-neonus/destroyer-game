@@ -84,6 +84,9 @@ MonoBehaviour:
   cooldown: 0.2
   kickbackDuration: 0.05
   kickbackOffset: 0.08
+  sprites:
+  - {fileID: 906814406, guid: 5712abf2c7d927f1ab62e41a8b814f0d, type: 3}
+  - {fileID: -315487356, guid: 5712abf2c7d927f1ab62e41a8b814f0d, type: 3}
 --- !u!1 &5079665875963243369
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +208,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.375, y: 0.125}
+    oldSize: {x: 0.4, y: 0.15}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

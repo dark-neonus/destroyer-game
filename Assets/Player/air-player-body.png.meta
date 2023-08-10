@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5a3bbe2c8bd9a5a5b0400575f7a1450
+guid: 5dff32cadefb123f599dfc3112b74bdb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,85 +136,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new-player-legs_0
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 1469
-        width: 258
-        height: 122
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78a6638c56feeeec28a6f6566004846c
-      internalID: -1542788014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: new-player-legs_1
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 1469
-        width: 98
-        height: 122
-      alignment: 9
-      pivot: {x: 0.3, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a9e7b8a1145f454d970dacb3cd8fb0a
-      internalID: -1220401605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: new-player-legs_2
+      name: 0-Air-Player-Body
       rect:
         serializedVersion: 2
         x: 10
-        y: 1289
-        width: 180
-        height: 122
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+        y: 1370
+        width: 220
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dac257b2ffe288809483cc5edbce400
-      internalID: 668248629
+      spriteID: 011d82bfbfb4a8d9cb1fdfcaa47df45b
+      internalID: 1468659005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new-player-legs_3
+      name: 1-Air-Player-Body
       rect:
         serializedVersion: 2
-        x: 230
-        y: 1310
-        width: 180
-        height: 100
-      alignment: 9
-      pivot: {x: 0.15, y: 0.5}
+        x: 10
+        y: 870
+        width: 220
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06dab6120cb290eb59bdaaef52fecc88
-      internalID: 343005460
+      spriteID: 2a0325800c77847c4880d74860a634f4
+      internalID: 536732856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2-Air-Player-Body
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 370
+        width: 424
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c649d06da1f0f7259b21c2e30ac5b6a6
+      internalID: 786601611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3-Air-Player-Body
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1070
+        width: 520
+        height: 520
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b0f70dfb9c2da7681a1342c777f841
+      internalID: -1533256116
       vertices: []
       indices: 
       edges: []
@@ -230,10 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new-player-legs_0: -1542788014
-      new-player-legs_1: -608529159
-      new-player-legs_2: -1220401605
-      new-player-legs_3: 668248629
+      0-Air-Player-Body: 1468659005
+      1-Air-Player-Body: 536732856
+      2-Air-Player-Body: 786601611
+      3-Air-Player-Body: -1533256116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

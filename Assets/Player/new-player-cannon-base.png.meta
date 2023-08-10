@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new-player-cannon-base_0
+      name: 0-Ground-Player-Cannon-Base
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1400
-        width: 200
-        height: 200
+        x: 10
+        y: 1370
+        width: 220
+        height: 220
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,13 +157,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new-player-cannon-base_1
+      name: 1-Ground-Player-Cannon-Base
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1000
-        width: 200
-        height: 400
+        x: 12
+        y: 869
+        width: 220
+        height: 420
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,13 +178,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new-player-cannon-base_2
+      name: 2-Ground-Player-Cannon-Base
       rect:
         serializedVersion: 2
-        x: 0
-        y: 600
-        width: 400
-        height: 400
+        x: 13
+        y: 366
+        width: 414
+        height: 428
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,15 +199,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new-player-cannon-base_3
+      name: 3-Ground-Player-Cannon-Base
       rect:
         serializedVersion: 2
-        x: 0
-        y: 100
-        width: 500
-        height: 500
+        x: 310
+        y: 1070
+        width: 520
+        height: 520
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,10 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new-player-cannon-base_0: 1834149157
-      new-player-cannon-base_1: -2098849716
-      new-player-cannon-base_2: -1432115740
-      new-player-cannon-base_3: -834854119
+      0-Ground-Player-Cannon-Base: 1834149157
+      1-Ground-Player-Cannon-Base: -2098849716
+      2-Ground-Player-Cannon-Base: -1432115740
+      3-Ground-Player-Cannon-Base: -834854119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,18 +10,21 @@ public class PlayerCannon : MonoBehaviour
     public float cooldown;
     private float _currentCooldown;
 
-    private Transform _sprite;
+    private Transform _spriteObject;
     public float kickbackDuration;
     public float kickbackOffset;
     private float _kickbackTargetPosition;
     private bool _isKickbacking;
 
+    public List<Sprite> sprites;
+
 
     void Start()
     {
         _isKickbacking = false;
-        _currentCooldown = 0;
-        _sprite = GetComponentInChildren<SpriteRenderer>().gameObject.transform;
+        _currentCooldown = cooldown;
+        _spriteObject = GetComponentInChildren<SpriteRenderer>().gameObject.transform;
+        _spriteObject.GetComponent<SpriteRenderer>().sprite = sprites[GameManager.gameManager.GetPlayerType()];
     }
 
     void Update()
@@ -44,8 +47,6 @@ public class PlayerCannon : MonoBehaviour
 
     public void Shoot() {
         if (_currentCooldown == 0) {
-            // Vector2 mousePos_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            // Vector2 myPos_ = transform.position;
             Vector2 direction_;
 
             foreach (Transform projectileSpawnet_It in projectileSpawners) {
@@ -65,26 +66,26 @@ public class PlayerCannon : MonoBehaviour
     private IEnumerator _Kickback() {
         _isKickbacking = true;
         float timer_ = 0f;
-        _kickbackTargetPosition = _sprite.localPosition.x - kickbackOffset;
+        _kickbackTargetPosition = _spriteObject.localPosition.x - kickbackOffset;
 
         while (timer_ < kickbackDuration / 2) {
             timer_ += Time.deltaTime;
-            _sprite.localPosition = new Vector3(Mathf.Lerp(_sprite.localPosition.x, _kickbackTargetPosition, timer_ / kickbackDuration * 2), _sprite.localPosition.y, _sprite.localPosition.z);
+            _spriteObject.localPosition = new Vector3(Mathf.Lerp(_spriteObject.localPosition.x, _kickbackTargetPosition, timer_ / kickbackDuration * 2), _spriteObject.localPosition.y, _spriteObject.localPosition.z);
             yield return null;
         }
 
-        _sprite.localPosition = new Vector3(_kickbackTargetPosition, _sprite.localPosition.y, _sprite.localPosition.z);
+        _spriteObject.localPosition = new Vector3(_kickbackTargetPosition, _spriteObject.localPosition.y, _spriteObject.localPosition.z);
 
 
         timer_ = 0f;
-        _kickbackTargetPosition = _sprite.localPosition.x + kickbackOffset;
+        _kickbackTargetPosition = _spriteObject.localPosition.x + kickbackOffset;
 
         while (timer_ < kickbackDuration / 2) {
             timer_ += Time.deltaTime;
-            _sprite.localPosition = new Vector3(Mathf.Lerp(_sprite.localPosition.x, _kickbackTargetPosition, timer_ / kickbackDuration * 2), _sprite.localPosition.y, _sprite.localPosition.z);
+            _spriteObject.localPosition = new Vector3(Mathf.Lerp(_spriteObject.localPosition.x, _kickbackTargetPosition, timer_ / kickbackDuration * 2), _spriteObject.localPosition.y, _spriteObject.localPosition.z);
             yield return null;
         }
-        _sprite.localPosition = new Vector3(_kickbackTargetPosition, _sprite.localPosition.y, _sprite.localPosition.z);
+        _spriteObject.localPosition = new Vector3(_kickbackTargetPosition, _spriteObject.localPosition.y, _spriteObject.localPosition.z);
         _isKickbacking = false;
     }
 

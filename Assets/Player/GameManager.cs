@@ -7,9 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
 
-    public List<GameObject> playerReferences;
+    public List<GameObject> groundPlayerReferences;
+    public List<GameObject> airPlayerReferences;
+    public bool airMode;
     public int playerLevel;
+    public List<GameObject> cannonPlatforms;
+    private int[] _playerTypes = new int[] {0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3};
 
+    private bool _tmpAirMode;
     private int _tmpLevel;
     private GameObject _player;
     private Transform _playerTransform;
@@ -26,6 +31,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public List<GameObject> enemies = new List<GameObject>();
 
+    
+
     void Awake()
     {
         if (gameManager != null) {
@@ -38,6 +45,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Start() {
+        airMode = false;
         health = maxHealth;
         // healthBarSlider.value = CalculateHealthPercentage();
         // UpdateHealthText();
@@ -50,26 +58,35 @@ public class GameManager : MonoBehaviour
     }
 
     void Update() {
+        if (Input.GetKey(KeyCode.Z))
+        {
+            airMode = true;
+        }
+        else if (Input.GetKey(KeyCode.X))
+        {
+            airMode = false;
+        }
         if (Input.GetKey(KeyCode.Alpha1))
         {
             playerLevel = 0;
         }
-        if (Input.GetKey(KeyCode.Alpha2))
+        else if (Input.GetKey(KeyCode.Alpha2))
         {
             playerLevel = 1;
         }
-        if (Input.GetKey(KeyCode.Alpha3))
+        else if (Input.GetKey(KeyCode.Alpha3))
         {
             playerLevel = 2;
         }
-        if (Input.GetKey(KeyCode.Alpha4))
+        else if (Input.GetKey(KeyCode.Alpha4))
         {
             playerLevel = 3;
         }
-        if (playerLevel != _tmpLevel) {
+        if (playerLevel != _tmpLevel || airMode != _tmpAirMode) {
             SpawnPlayer();
         }
         _tmpLevel = playerLevel;
+        _tmpAirMode = airMode;
     }
 
     public void DealDamage(float damage_) {
@@ -112,7 +129,12 @@ public class GameManager : MonoBehaviour
         health = maxHealth;
         // healthBarSlider.value = CalculateHealthPercentage();
         // UpdateHealthText();
-        _player = Instantiate(playerReferences[playerLevel], _playerTransform.position, _playerTransform.rotation);
+        if (!airMode) {
+            _player = Instantiate(groundPlayerReferences[playerLevel], _playerTransform.position, _playerTransform.rotation);
+        }
+        else {
+            _player = Instantiate(airPlayerReferences[playerLevel], _playerTransform.position, _playerTransform.rotation);
+        }
         _player.transform.localScale = _playerTransform.localScale;
 
         _SetCannons();
@@ -147,11 +169,14 @@ public class GameManager : MonoBehaviour
     }
 
     private void _SetCannons() {
-        List<GameObject> cannonPlatforms_ = _player.GetComponentInChildren<CannonBase>().gameObject.GetComponent<CannonBase>().cannonPlatforms;
+        cannonPlatforms = new List<GameObject>();
+        foreach (CannonBase cannonBase_It in _player.GetComponentsInChildren<CannonBase>()) {
+            cannonPlatforms.AddRange(cannonBase_It.gameObject.GetComponent<CannonBase>().cannonPlatforms);
+        }
 
-        for (int i = 0; i < Mathf.Min(cannonPlatforms_.Count, selectedCannonIndices.Count); i++) {
+        for (int i = 0; i < Mathf.Min(cannonPlatforms.Count, selectedCannonIndices.Count); i++) {
             if (playerCannonPrefabs[selectedCannonIndices[i]] != null) {
-                Instantiate(playerCannonPrefabs[selectedCannonIndices[i]], cannonPlatforms_[i].transform);
+                Instantiate(playerCannonPrefabs[selectedCannonIndices[i]], cannonPlatforms[i].transform);
             }
         } 
     }
@@ -173,5 +198,9 @@ public class GameManager : MonoBehaviour
             result_.Sort((a, b) => Vector2.Distance(origin_, a.transform.position).CompareTo(Vector2.Distance(origin_, b.transform.position)));
         }
         return result_;
+    }
+
+    public int GetPlayerType() {
+        return _playerTypes[playerLevel];
     }
 }
