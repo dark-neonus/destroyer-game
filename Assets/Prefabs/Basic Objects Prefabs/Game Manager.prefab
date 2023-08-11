@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1941922306435862354
 MonoBehaviour:
@@ -60,7 +60,7 @@ MonoBehaviour:
   playerCannonPrefabs:
   - {fileID: 4936963118146668458, guid: 17cbd0f89716c57b5b2b921b93dc6e39, type: 3}
   - {fileID: 4936963118146668458, guid: cd6a8949a35690eb4b7d428565cc85c8, type: 3}
-  selectedCannonIndices: 00000000000000000000000000000000
+  selectedCannonIndices: 01000000010000000100000001000000
   health: 0
   maxHealth: 20000
   healthBarSlider: {fileID: 0}
