@@ -29,8 +29,13 @@ public class CameraMechanics : MonoBehaviour
 
     private void _FollowPlayer() {
         if (player != null) {
-            Vector3 mousePosition_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = Vector3.SmoothDamp(transform.position, Vector3.Lerp(player.position, mousePosition_, magnetToMouse) + offset, ref _velocity, smooth * Time.deltaTime);
+            if (Vector2.Distance(transform.position, player.position) > GameManager.gameManager.PartOfMapSize(0.25f)) {
+                transform.position = player.position;
+            }
+            else {
+                Vector3 mousePosition_ = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                transform.position = Vector3.SmoothDamp(transform.position, Vector3.Lerp(player.position, mousePosition_, magnetToMouse) + offset, ref _velocity, smooth * Time.deltaTime);
+            }
         }
     } 
 

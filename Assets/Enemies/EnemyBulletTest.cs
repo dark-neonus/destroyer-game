@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBulletTest : MonoBehaviour
@@ -10,6 +8,10 @@ public class EnemyBulletTest : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, lifeTime);
+    }
+
+    private void Update() {
+        GameManager.gameManager.ProcessCoordinates(transform);
     }
 
 

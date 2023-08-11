@@ -31,6 +31,7 @@ public class PlayerRocket : MonoBehaviour
     }
 
     private void Update() {
+        GameManager.gameManager.ProcessCoordinates(transform);
         _Move();
         if (_counter1 <= 0) {
                 _FindTarget();

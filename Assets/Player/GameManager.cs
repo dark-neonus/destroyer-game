@@ -27,11 +27,12 @@ public class GameManager : MonoBehaviour
 
     public Slider healthBarSlider;
     public TextMeshProUGUI healthText;
+    public GameObject waterBackgroundPrefab;
 
     [HideInInspector]
     public List<GameObject> enemies = new List<GameObject>();
 
-    
+    public float mapQuarterSize;
 
     void Awake()
     {
@@ -150,7 +151,7 @@ public class GameManager : MonoBehaviour
         foreach (EnemyManager enemyManagerScript_It in enemyManagerScripts_) {
             enemyManagerScript_It.player = _player.transform;
         }
-        
+        Instantiate(waterBackgroundPrefab, _player.transform);
     }
 
 
@@ -202,5 +203,44 @@ public class GameManager : MonoBehaviour
 
     public int GetPlayerType() {
         return _playerTypes[playerLevel];
+    }
+
+    public void ProcessCoordinates(Transform obj) {
+        ActiveProcessCoordinates(obj);
+        PassiveProcessCoordinates(obj);
+    }
+
+    public void PassiveProcessCoordinates(Transform obj) {
+        if (obj.position.x > PartOfMapSize(0.6f) && _player.transform.position.x < PartOfMapSize(-0.4f)) {
+            obj.position = new (obj.position.x - PartOfMapSize(2f), obj.position.y, obj.position.z);
+        }
+        else if (obj.position.x < PartOfMapSize(-0.6f) && _player.transform.position.x > PartOfMapSize(0.4f)) {
+            obj.position = new (obj.position.x + PartOfMapSize(2f), obj.position.y, obj.position.z);
+        }
+        if (obj.position.y > PartOfMapSize(0.6f) && _player.transform.position.y < PartOfMapSize(-0.4f)) {
+            obj.position = new (obj.position.x, obj.position.y - PartOfMapSize(2f), obj.position.z);
+        }
+        else if (obj.position.y < PartOfMapSize(-0.6f) && _player.transform.position.y > PartOfMapSize(0.4f)) {
+            obj.position = new (obj.position.x, obj.position.y + PartOfMapSize(2f), obj.position.z);
+        }
+    }
+
+    public void ActiveProcessCoordinates(Transform obj, float koef=1.6f) {
+        if (obj.position.x > PartOfMapSize(koef)) {
+            obj.position = new (obj.position.x - PartOfMapSize(2f), obj.position.y, obj.position.z);
+        }
+        else if (obj.position.x < PartOfMapSize(-koef)) {
+            obj.position = new (obj.position.x + PartOfMapSize(2f), obj.position.y, obj.position.z);
+        }
+        if (obj.position.y > PartOfMapSize(koef)) {
+            obj.position = new (obj.position.x, obj.position.y - PartOfMapSize(2f), obj.position.z);
+        }
+        else if (obj.position.y < PartOfMapSize(-koef)) {
+            obj.position = new (obj.position.x, obj.position.y + PartOfMapSize(2f), obj.position.z);
+        }
+    }
+
+    public float PartOfMapSize(float part) {
+        return mapQuarterSize * part;
     }
 }

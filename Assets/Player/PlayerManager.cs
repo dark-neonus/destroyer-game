@@ -19,11 +19,14 @@ public class PlayerManager : MonoBehaviour
 
     private void Update() {
         _CheckShooting();
-        
     }
 
     private void LateUpdate() {
         _Move();
+    }
+
+    private void FixedUpdate() {
+        GameManager.gameManager.ActiveProcessCoordinates(transform, 1.2f);
     }
     
 

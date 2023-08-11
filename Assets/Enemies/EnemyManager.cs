@@ -35,6 +35,11 @@ public class EnemyManager : MonoBehaviour
         isAngry = false;
         GameManager.gameManager.enemies.Add(gameObject);
     }
+
+    private void Update() {
+        GameManager.gameManager.ProcessCoordinates(transform);
+    }
+
     public void DealDamage(float damage_) {
         health -= damage_;
         _CheckDeath();

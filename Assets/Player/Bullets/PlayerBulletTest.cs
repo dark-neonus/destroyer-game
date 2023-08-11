@@ -1,16 +1,7 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletTest : BulletClass
 {
-    public float damage;
-    public float lifeTime;
-
-
-    void Start()
-    {
-        Destroy(gameObject, lifeTime);
-    }
-
     void OnTriggerEnter2D(Collider2D collider_)
     {
         if (collider_.tag == "Enemy Collider") {
@@ -36,5 +27,9 @@ public class Bullet : MonoBehaviour
 
     public void DestroyProjectile() {
         Destroy(gameObject);
+    }
+
+    private void Update() {
+        GameManager.gameManager.ProcessCoordinates(transform);
     }
 }
